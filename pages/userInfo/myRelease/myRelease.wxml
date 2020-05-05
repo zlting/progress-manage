@@ -1,0 +1,33 @@
+<view>
+	<view class="release">
+		<view wx:if="{{list.length>0}}">
+			<view class="listItem" wx:for="{{list}}" wx:key="index">
+				<view  class="{{item.contentType?'ellipsisText':'wudetail'}}">{{item.content||''}}</view>
+				<view class="open" catchtap='ellipsis' wx:if="{{item.content.length>50}}" data-index="{{index}}" data-type="{{item.contentType}}">{{item.contentType?'展开':'收起'}}</view>
+				<view class="imgList">
+					<image wx:for="{{item.img}}" wx:for-item="val" wx:for-index="key" wx:key="key" class="imgItem" data-item="{{item.img}}" data-src="{{val}}" bindtap="previewImage" src="{{val}}"></image>
+				</view>
+				<view class="flex-1 flex_center" style="padding:0 40rpx 40rpx">
+					<view class="flex-1 time">{{item.time}}</view>
+					<view class="flex_center bottomNum">
+						<view class="flex_center">
+							<view class="flex_center" catchtap="addLike" data-isThumbUp="{{item.isThumbUp}}" data-index="{{index}}">
+								<image class="imgIcon" wx:if="{{item.isThumbUp}}" src="/img/index/icon_give_true.png"></image>
+								<image class="imgIcon" wx:else src="/img/index/icon_give_false.png"></image>
+								<text style="color:{{item.isThumbUp?'#F87A2F':''}}">{{item.likeNum}}</text>
+							</view>
+						</view>
+					</view>
+					<view class="flex_center" wx:if="{{item.isEvaluate}}" style="margin-left:50rpx" bindtap="jumpEvalute" data-id="{{item.id}}">
+						<image class="imgIcon" src="/img/index/icon_message.png"></image>
+						<text>{{item.evaluateNum}}</text>
+					</view>
+				</view>
+			</view>
+		</view>
+		<view class="noRelease" wx:if="{{list.length==0 && !loadMore}}">
+			<image class="noReleaseImg" src="/img/user/noRelease.png"></image>
+			<text class="noReleaseText">我的发布为空~</text>
+		</view>
+	</view>
+</view>

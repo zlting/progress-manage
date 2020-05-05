@@ -1,0 +1,41 @@
+<swiper wx:if="{{bannerList.length>0}}" autoplay circular class="peopleIcon"  indicator-dots current="{{indexType}}" bindchange="change" indicator-color="rgba(248,122,47,1);" indicator-active-color="#F87A2F">
+		<swiper-item  wx:for="{{bannerList}}" wx:for-index="imgindex" wx:key="imgindex" bindtap="jumpadDetail" data-id="{{item.id}}">
+			<image src="{{item.bannerImg}}" class="peopleIcon" />
+		</swiper-item>
+</swiper>
+<view class="main">
+	<view class="flex_center title">
+		<view>联系人</view>
+		<view class="flex-1 flex_center" style="justify-content:flex-end">
+			<input class="flex-1" style="text-align:right" placeholder-style="font-size:30rpx;color:#ccc" value="{{userName}}" bindinput="getName" placeholder="请输入广告主姓名"></input>
+			<!-- <image class="upload_icon_right" src="/img/index/upload_icon_right.png"></image> -->
+		</view>
+	</view>
+	<view class="flex_center title">
+		<view>联系电话</view>
+		<input class="flex-1" value="{{userMobile}}" type="tel" bindinput="getPhone" style="text-align:right" placeholder-style="font-size:30rpx;color:#ccc" placeholder="请输入广告主联系电话"></input>
+	</view>
+	<view class="flex_center title">
+		<view>商家名称（选填）</view>
+		<input class="flex-1" value="{{businessName}}" bindinput="getBusinessName" style="text-align:right" placeholder-style="font-size:30rpx;color:#ccc" placeholder="请输入商家名称"></input>
+	</view>
+	<view class="flex_center title">
+		<view>商家地址（选填）</view>
+		<input class="flex-1" value="{{businessAddress}}" bindinput="getAddress" style="text-align:right" placeholder-style="font-size:30rpx;color:#ccc" placeholder="请输入商家地址"></input>
+	</view>
+	<view class="flex_center title">
+		<view class="flex-1">营业执照（选填）</view>
+		<image class="upload" bindtap="uploadImg" src="{{businessLicense?businessLicense:'/img/user/upload.png'}}"></image>
+	</view>
+	<view class="flex_center titleText">
+		<view bindtap="changeCircle">
+			<image class="icon_circle_false" wx:if="{{circleType}}" src="/img/help/icon_circle_true.png"></image>
+			<image class="icon_circle_false" wx:else src="/img/help/icon_circle_false.png"></image>
+		</view>
+		<text style="margin-left:10rpx">我已阅读</text>
+		<text style="color:#64A3EA"  bindtap="jumpRule">《规则说明》</text>
+	</view>
+	<view style="padding:60rpx 0 40rpx" bindtap="apply">
+		<btn text="申请" />
+	</view>
+</view>

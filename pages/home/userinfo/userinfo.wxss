@@ -1,0 +1,159 @@
+page {
+  background: #F3F4F5;
+}
+
+.top_main {
+  background: #F99457;
+  padding: 0 30rpx;
+  padding-top: 104rpx;
+  padding-bottom: 40rpx;
+  box-shadow: 0rpx 8rpx 16rpx 0rpx rgba(249, 148, 87, 0.3);
+  border-radius: 0rpx 0rpx 24rpx 24rpx;
+}
+
+.top_content {
+  /* height: 320rpx; */
+  background: rgba(255, 255, 255, 1);
+  border-radius: 24rpx;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+}
+
+.headImgDiv {
+  padding: 10rpx;
+  background: #fff;
+  border-radius: 50%;
+  margin-top: -70rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.headImg {
+  width: 144rpx;
+  height: 144rpx;
+  border-radius: 50%;
+}
+
+.top_name {
+  font-size: 34rpx;
+  font-weight: bold;
+  color: #333;
+  padding: 20rpx 0 30rpx
+}
+
+.top_bottom {
+  padding: 0 30rpx 40rpx;
+}
+
+.top_bottom_div {
+  height: 94rpx;
+  background: rgba(245, 166, 0, .1);
+  border-radius: 55rpx;
+  display: flex;
+  align-items: center;
+}
+
+.top_bottom_flex1 {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #F5A600;
+  font-size: 30rpx;
+  font-weight: bold;
+}
+
+.user_icon {
+  width: 36rpx;
+  height: 36rpx;
+  margin-right: 10rpx;
+
+}
+
+.content {
+  padding: 0 30rpx 30rpx;
+}
+
+.listItem {
+  padding: 40rpx 0;
+  background: #fff;
+  box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.06);
+  border-radius: 24rpx;
+  margin-top: 20rpx;
+  word-break: break-all;
+
+}
+
+.itemName {
+  font-size: 30rpx;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  padding-right: 30rpx;
+  align-items: flex-start;
+  padding-bottom: 30rpx;
+}
+
+.itemIcon {
+  width: 8rpx;
+  height: 28rpx;
+  background: rgba(248, 122, 47, 1);
+  border-radius: 0rpx 200rpx 200rpx 0rpx;
+  margin-right: 22rpx;
+  margin-top: 8rpx
+}
+
+.imgList {
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 30rpx;
+}
+
+.imgItem {
+  width: 190rpx;
+  height: 190rpx;
+  margin-right: 30rpx;
+  margin-bottom: 30rpx;
+  border-radius: 10rpx;
+}
+
+.imgIcon {
+  width: 40rpx;
+  height: 40rpx;
+  margin-right: 12rpx
+}
+
+.bottomNum {
+  font-size: 28rpx;
+  color: #333;
+}
+
+.time {
+  font-size: 28rpx;
+  color: #666;
+}
+
+.border_icon {
+  border-left: 2rpx solid rgba(245, 166, 0, .4);
+  border-right: 2rpx solid rgba(245, 166, 0, .4)
+}
+.msg_empty{
+  width: 498rpx;
+  height: 326rpx;
+  margin-bottom: 72rpx;
+  margin-top: 78rpx;
+}
+.emptyText{
+  font-size: 30rpx;
+  color: #ccc;
+}
+.flex_empty{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

@@ -1,0 +1,36 @@
+.lsit{
+  padding: 0 30rpx;
+}
+.title{
+  font-size: 32rpx;
+  color: #333;
+  font-weight: bold;
+  padding-bottom: 20rpx;
+}
+.listItem{
+  padding: 40rpx 0;
+  border-bottom: 2rpx solid #F6F6F6;
+  font-size: 28rpx;
+  color: #999;
+}
+.money{
+  font-size: 28rpx;
+  color: #F87A2F;
+  font-weight: bold;
+}
+.noData{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.noHelp{
+  width: 500rpx;
+  height: 326rpx;
+  margin-bottom: 72rpx;
+}
+.noText{
+  font-size: 30rpx;
+  color: #ccc;
+}

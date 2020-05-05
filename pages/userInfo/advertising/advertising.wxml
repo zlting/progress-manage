@@ -1,0 +1,37 @@
+<view class="top">
+	<swiper autoplay circular  wx:if="{{bannerList.length>0}}" class="peopleIcon"  indicator-dots current="{{indexType}}" bindchange="change" indicator-color="rgba(248,122,47,1);" indicator-active-color="#F87A2F">
+			<swiper-item bindtap="jumpadDetail" data-id="{{item.id}}" wx:for="{{bannerList}}" wx:for-index="imgindex" wx:key="imgindex">
+				<image src="{{item.bannerImg}}" class="peopleIcon" />
+			</swiper-item>
+	</swiper>
+</view>
+<view class="main">
+	<view class="flex_center title">
+		<view>真实姓名</view>
+		<input class="flex-1" value="{{userName}}" bindinput="getName" style="text-align:right" placeholder-style="font-size:30rpx;color:#ccc" placeholder="请输入您的真实姓名"></input>
+	</view>
+	<view class="flex_center title">
+		<view>手机号</view>
+		<input class="flex-1 " value="{{userMobile}}" bindinput="getPhone" type="tel" style="text-align:right" placeholder-style="font-size:30rpx;color:#ccc" placeholder="请输入您的手机号"></input>
+	</view>
+	<view class="flex_center title">
+		<view>被推荐人姓名</view>
+		<input class="flex-1" value="{{userNameRecommend}}" bindinput="getName2" style="text-align:right" placeholder-style="font-size:30rpx;color:#ccc" placeholder="请输入您的被推荐人姓名"></input>
+	</view>
+	<view class="flex_center title">
+		<view>被推荐人手机号</view>
+		<input class="flex-1" value="{{userMobileRecommend}}" type="tel" bindinput="getPhone2" style="text-align:right" placeholder-style="font-size:30rpx;color:#ccc" placeholder="请输入您的被推荐人手机号"></input>
+	</view>
+	<view class="flex_center title">
+		<view>商家名称（选填）</view>
+		<input class="flex-1" value="{{businessName}}" bindinput="getBusinessName" style="text-align:right" placeholder-style="font-size:30rpx;color:#ccc" placeholder="请输入商家名称"></input>
+	</view>
+  <view class="flex_center title">
+		<view>商家地址（选填）</view>
+		<input class="flex-1" value="{{businessAddress}}" bindinput="getBusinessAddress" style="text-align:right" placeholder-style="font-size:30rpx;color:#ccc" placeholder="请输入商家地址"></input>
+	</view>
+	<view style="padding:50rpx 0 40rpx" class="flex">
+		<view class="btn1" bindtap="jumpRule">转发推荐软文</view>
+		<view class="btn2" bindtap="apply">已告知，并提交</view>
+	</view>
+</view>

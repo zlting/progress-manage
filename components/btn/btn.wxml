@@ -1,0 +1,3 @@
+	<view class="flex_center">
+		<view class="button">{{text}}</view>
+	</view>

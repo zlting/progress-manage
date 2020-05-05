@@ -1,0 +1,30 @@
+.backTitleDiv{
+  position: fixed;
+  left: 0;
+ 
+  width: 100%;
+  text-align: center;
+}
+.backDiv{
+  position: absolute;
+  left: 0rpx;
+  padding-left: 30rpx;
+  width: 24rpx;
+  display: flex;
+  align-items: center;
+}
+.icon_back{
+  width: 24rpx;
+  height: 40rpx;
+}
+.backText{
+  font-family:PingFangSC-Medium,PingFang SC;
+  font-size: 36rpx;
+  color: #fff;
+}
+.backTop{
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+}

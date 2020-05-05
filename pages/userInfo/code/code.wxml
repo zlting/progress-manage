@@ -1,0 +1,20 @@
+<view class="code">
+	<back text="近邻二维码" bgColor="rgba(249, 148, 87, 0);" />
+	<image class="code_bg" src="/img/user/code_bg.png"></image>
+	<view class="main">
+		<view class="main_content">
+			<image class="code_icon" src="/img/user/code_icon.png"></image>
+			<view class="week">
+				<view class="div">
+					<image class="code_headimg" src="{{userInfo.headimgurl||'/img/user/code_headimg.png'}}"></image>
+					<image class="codeImg" bindtap='imgYu' src="/img/qcode.jpg"></image>
+					<view style="text-align:center" class="bottom">
+						<view>点击放大小程序码,</view>
+						<view>即可分享给您的微信好友～</view>
+					</view>
+
+				</view>
+			</view>
+		</view>
+	</view>
+</view>

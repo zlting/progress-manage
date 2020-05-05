@@ -1,0 +1,18 @@
+.text{
+  padding: 30rpx;
+  font-size: 30rpx;
+  color: #333;
+}
+.bottom{
+  position: fixed;
+  width: 100%;
+  bottom:40rpx;
+  margin:auto;
+  left: 0;
+  border:none !important;
+  background: #fff !important;
+
+}
+button::after{
+  border:none !important;
+}

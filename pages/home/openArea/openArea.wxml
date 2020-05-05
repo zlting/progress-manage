@@ -1,0 +1,40 @@
+<view class="main">
+	<swiper wx:if="{{bannerList.length>0}}" autoplay circular class="houseIcon"  indicator-dots current="{{index}}" bindchange="change" indicator-color="rgba(248,122,47,1);" indicator-active-color="#F87A2F">
+			<swiper-item bindtap="jumpadDetail" data-id="{{item.id}}" wx:for="{{bannerList}}" wx:for-index="imgindex" wx:key="imgindex">
+				<image src="{{item.bannerImg}}" class="houseIcon" />
+			</swiper-item>
+	</swiper>
+	<view style="padding:0 30rpx">
+		<view class="flex_center week">
+			<view class="weekTitle">开通地区</view>
+			<view class="flex-1 flex_center" style="justify-content:flex-end">
+				<picker mode="region" bindchange="bindRegionChange" value="{{region}}" multiSelector='3' custom-item="{{customItem}}">
+					<text style="font-size:30rpx;color:#ccc" wx:if="{{region.length===0}}">请选择</text>
+					<text style="font-size:30rpx;color:#666" wx:else>{{region[0]}} {{region[1]}} {{region[2]}}</text>
+					<image class="area_right" src="/img/index/area_right.png"></image>
+				</picker>
+			</view>
+		</view>
+		<view class="flex_center week">
+			<view class="weekTitle">小区名称</view>
+			<view class="flex-1 " style="justify-content:flex-end;text-align:right">
+				<input placeholder="请输入小区名称" value="{{communityName}}" bindinput="getName" placeholder-style="font-size:30rpx;color:#ccc"></input>
+			</view>
+		</view>
+		<view class="flex_center week">
+			<view class="weekTitle">住址信息</view>
+			<view class="flex-1 " style="justify-content:flex-end;text-align:right">
+				<input placeholder="请输入具体房号" value="{{address}}" bindinput="getAddress" placeholder-style="font-size:30rpx;color:#ccc"></input>
+			</view>
+		</view>
+		<view class="flex_center week">
+			<view class="weekTitle">居住凭证</view>
+			<view class="flex-1 " style="justify-content:flex-end;text-align:right">
+				<image class="icon_upload" bindtap="uploadImg" src="{{certificate?certificate:'/img/index/icon_upload.png'}}"></image>
+			</view>
+		</view>
+		<view class="bottomBtn" bindtap="apply">
+			<btn text="提交" />
+		</view>
+	</view>
+</view>

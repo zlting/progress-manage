@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "发布求助",
+  "enablePullDownRefresh": false ,
+  "usingComponents": {
+    "btn": "/components/btn/btn"  
+  }
+}

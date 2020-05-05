@@ -1,0 +1,33 @@
+.main{
+  padding:0 30rpx;
+}
+.listItem{
+  padding:30rpx 0;
+  border-bottom: 2rpx solid #F6F6F6;
+  font-size: 28rpx;
+  color: #666;
+}
+.title{
+  font-size: 32rpx;
+  color: #333;
+  font-weight: bold;
+}
+.change{
+  padding:20rpx 0 10rpx
+}
+.noRelease{
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.noReleaseImg{
+  width: 500rpx;
+  height: 326rpx;
+}
+.noReleaseText{
+  font-size: 30rpx;
+  color: #ccc;
+  margin-top: 72rpx;
+}

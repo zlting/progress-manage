@@ -1,0 +1,21 @@
+<view class="main">
+	<image class="capacity_icon" src="/img/help/capacity_icon.png"></image>
+	<view class="top flex_center">
+		<image class="headImg" src="{{obj.headImgUrl}}?x-oss-process=image/resize,m_fill,w_120,h_120/quality,Q_100"></image>
+		<text class="headName">{{obj.userName}}</text>
+	</view>
+	<view class="content">
+		<view class="title">{{obj.bulletinTitle}}</view>
+		<view style="margin-bottom:20rpx">
+			<text >{{obj.bulletinContent}}</text>
+		</view>
+		<view style="padding:30rpx 0" wx:if="{{obj.videoUrl&&obj.videoUrl!=''}}">
+			<view class="videoDiv" bindtap="jumpAudio">
+				<!-- poster="{{obj.videoImg}}" -->
+				<video class="icon_img" style="height:320rpx" id="myVideo" src="{{obj.videoUrl}}" controls enable-danmu danmu-btn show-center-play-btn="{{false}}"></video>
+				<image class="video_icon" wx:if="{{videoType}}" src="/img/index/video_icon.png"></image>
+			</view>
+		</view>
+		<image class="icon_img" mode="widthFix" wx:for="{{obj.bulletinImg}}" bindtap="previewImage" wx:key="index" data-src="{{item}}" src="{{item}}"></image>
+	</view>
+</view>

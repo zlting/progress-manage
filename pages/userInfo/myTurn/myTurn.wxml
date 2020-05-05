@@ -1,0 +1,47 @@
+<view>
+	<view class="newMain" wx:if="{{obj}}">
+		<view class="flex-1" style="overflow: auto;">
+			<view class="top">
+				<image class="helpDetail" src="/img/help/helpDetail.png"></image>
+				<view class="timetitle">本次求助倒计时</view>
+				<view class="time">
+					<view class="flex timeDiv">
+						<view class="timeBtn">{{day}}</view>
+						<text class="timeText">天</text>
+						<view class="timeBtn">{{hou}}</view>
+						<text class="timeText">时</text>
+						<view class="timeBtn">{{min}}</view>
+						<text class="timeText">分</text>
+						<view class="timeBtn">{{sec}}</view>
+						<text class="timeText" style="padding-right:0">秒</text>
+					</view>
+				</view>
+			</view>
+			<view class="content">
+				<view class="title">{{obj.demandTitle}}</view>
+				<!-- 报酬可显示隐藏 -->
+				<view class="flex_center baochou" wx:if="{{obj.demandAmount}}">
+					<view>求助报酬：</view>
+					<view style="font-size:40rpx;margin-right:10rpx">{{obj.demandAmount}}</view>
+					<view>元</view>
+				</view>
+				<view>{{obj.demandDetail}}</view>
+				<image class="imgUrl"  data-src="{{item}}" bindtap="previewImage"  wx:for="{{obj.demandImg}}" wx:key="index" src="{{item}}" mode="widthFix"></image>
+			</view>
+		</view>
+		<view class="newBottom">
+			<view class="newBtn1" bindtap="jumpHistory">历史求助</view>
+			<view class="newBtn1" bindtap="cancle">取消发布</view>
+			<view class="newBtn2" bindtap="jumpApply">重新发布</view>
+		</view>
+	</view>
+	<view wx:else class="turn">
+		<image class="noTurn" src="/img/user/noTurn.png"></image>
+		<view class="turnTitle">您当前还没有发布中的求助</view>
+		<view>可以向社区的小伙伴发起求助， 共创和谐近邻～</view>
+		<view class="flex">
+			<view class="btn1" bindtap="jumpHistory">历史求助</view>
+			<view class="btn2" bindtap="jumpApply">发布求助</view>
+		</view>
+	</view>
+</view>

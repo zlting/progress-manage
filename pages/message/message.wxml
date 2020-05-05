@@ -1,0 +1,18 @@
+<view>
+	<view wx:if="{{list.length>0}}">
+		<view class="delectMsg" bindtap="cancle">全部清空</view>
+		<view class="main">
+			<view class="listItem" wx:for="{{list}}" wx:key="index">
+				<view class="flex_center">
+					<view class="flex-1 msgName ellipsis">{{item.info}}</view>
+					<image class="right_icon" src="/img/index/area_right.png"></image>
+				</view>
+				<view class="time">{{item.gmtCreate}}</view>
+			</view>
+		</view>
+	</view>
+	<view class="flex_empty" wx:if="{{list.length===0 && !loadMore}}">
+		<image class="msg_empty" src="/img/index/msg_empty.png"></image>
+		<view class="emptyText">消息为空~</view>
+	</view>
+</view>

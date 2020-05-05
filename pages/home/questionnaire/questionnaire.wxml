@@ -1,0 +1,45 @@
+<view>
+	<view class="main">
+		<image class="question_icon" src="/img/index/question_icon.png"></image>
+		<view class="content" wx:for="{{list}}" wx:key="index">
+			<!-- 单选 -->
+			<view >
+				<view class="flex">
+					<view style="font-size:32rpx;color:#F87A2F">*</view>
+					<view class="flex flex-1">
+						<view class="name flex-1">{{index<=9?0:''}}{{index+1}}，{{item.questionName}}</view>
+						<view style="font-size:26rpx;color:#999">{{item.questionType===0?'（单选）':'（多选）'}}</view>
+					</view>
+				</view>
+				<view>
+					<view class="flex_center" bindtap="changeAnswer" data-index="{{index}}" data-idx="{{key}}" style="padding-top:30rpx" wx:for="{{item.questionInfoList}}" wx:for-item="val" wx:for-index="key" wx:key="key">
+						<image class="checkIcon" wx:if="{{val.changeType}}" src="/img/index/check_true.png"></image>
+						<image class="checkIcon" wx:else src="/img/index/check_false.png"></image>
+						<view class="{{val.changeType?'answer':'answer1'}}">{{val.serialNum}}、{{val.content}}</view>
+					</view>
+				</view>
+				<image class="icon_status" src="/img/index/icon_status.png"></image>
+			</view>
+
+			<!-- 多选 -->
+			<!-- <view wx:else>
+				<view class="flex">
+					<view style="font-size:32rpx;color:#F87A2F">*</view>
+					<view class="flex_center">
+						<view class="name">01，您投入多少资金在股市</view>
+						<view style="font-size:26rpx;color:#999">（多选）</view>
+					</view>
+				</view>
+				<view>
+					<view class="flex_center" style="padding-top:30rpx" wx:for="{{item.questionInfoList}}" wx:for-item="res" wx:for-index="idx" wx:key="idx">
+						<image class="checkIcon" src="/img/index/check_false.png"></image>
+						<view class="answer1">{{val.serialNum}}、{{val.content}}</view>
+					</view>
+				</view>
+			</view> -->
+		</view>
+	</view>
+	<view class="botton" bindtap="postSignUp">
+		<btn text="提交" />
+	</view>
+</view>

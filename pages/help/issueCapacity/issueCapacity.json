@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "发布能力",
+  "enablePullDownRefresh": false ,
+  "usingComponents": {
+    "btn": "/components/btn/btn"  
+  }
+}

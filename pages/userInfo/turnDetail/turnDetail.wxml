@@ -1,0 +1,10 @@
+<view class="main">
+  <view class="title">{{obj.demandTitle}}</view>
+  <view class="flex_center moeny" wx:if="{{obj.demandAmount}}">
+    <text>求助报酬：</text>
+    <text class="moenyText">{{obj.demandAmount}}</text>
+    <text>元</text>
+  </view>
+  <view class="detail">{{obj.demandDetail}}</view>
+  <image class="imgUrl" wx:for="{{obj.demandImg}}" data-src="{{item}}" bindtap="previewImage"  mode="widthFix" wx:key="index" src="{{item}}"></image>
+</view>

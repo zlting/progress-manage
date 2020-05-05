@@ -1,0 +1,16 @@
+<view class="main">
+	<view wx:if="{{list.length>0 }}">
+		<view class="listItem" wx:for="{{list}}" wx:key="index" bindtap="jumpDetail" data-paperId="{{item.paperId}}">
+			<view class="title ellipsis">问卷标题：{{item.paperName}}</view>
+			<view class="change flex">填写选项：
+				<text wx:for="{{item.nbPaperQuestionRecordList}}" wx:for-item="res" wx:for-index="_index" wx:key="_index">{{res.answer+','}}</text>
+			
+			 </view>
+			<view class="time ">填写时间：{{item.gmtCreate}}</view>
+		</view>
+	</view>
+	<view class="noRelease" wx:if="{{list.length==0 && !loadMore}}">
+		<image class="noReleaseImg" src="/img/user/noRelease.png"></image>
+		<text class="noReleaseText">我的发布为空~</text>
+	</view>
+</view>

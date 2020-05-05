@@ -1,0 +1,9 @@
+	<view>
+		<view class="backTop" style="height:{{statusBarHeight}}px;background:{{bgColor}}"></view>
+		<view class="backTitleDiv" style="height:{{titleBarHeight}}px;top:{{statusBarHeight}}px;line-height:{{titleBarHeight}}px;background:{{bgColor}}">
+			<view class="backDiv" bindtap="jumpBack" style="height:{{titleBarHeight}}px;">
+				<image class="icon_back" src="/img/icon_back.png"></image>
+			</view>
+			<view class="backText">{{text}}</view>
+			</view>
+		</view>

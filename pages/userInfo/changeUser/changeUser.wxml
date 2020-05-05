@@ -1,0 +1,38 @@
+<view class="main">
+	<view class="top">
+		<image class="headImg"  bindtap="uploadImg"	wx:if="{{userInfo.headimgurl}}" src="{{userInfo.headimgurl}}?x-oss-process=image/resize,m_fill,w_160,h_160/quality,Q_100"></image>
+		<image class="userIcon" wx:else src="/img/user/code_headimg.png"></image>
+		<image class="uploadIcon" src="/img/user/uploadIcon.png"></image>
+
+	</view>
+	<view class="flex_center week" bindtap="changeName">
+		<text class="flex-1 title">姓名</text>
+		<text >{{userInfo.nickname}}</text>
+		<image class="icon_right" src="/img/user/icon_right.png"></image>
+	</view>
+	<view class="flex_center week" style="margin-top:30rpx"  bindtap="changePhone">
+		<text class="flex-1 title">手机号</text>
+		<text>{{userInfo.userMobile}}</text>
+		<image class="icon_right" src="/img/user/icon_right.png"></image>
+	</view>
+	<view class="alert" wx:if="{{show}}" >
+		<view class="model">
+			<view class="modelTop" wx:if="{{alertType==1}}">
+				<view class="modelTitle">修改姓名</view>
+				<input class="modelInput" maxlength="4" value="{{nickname}}" bindinput="getName" placeholder-style="font-size:28rpx;color:#ccc" placeholder="不能超过4个字符"></input>
+			</view>
+			<view class="modelTop" wx:else>
+				<view class="modelTitle">修改手机号</view>
+				<input class="modelInput"  value="{{userMobile}}" bindinput="getPhone" placeholder-style="font-size:28rpx;color:#ccc" placeholder="请输入新手机号"></input>
+				<view class="modelInput flex_center" style="margin-top:20rpx;padding-right:0">
+					<input placeholder-style="font-size:28rpx;color:#ccc" bindinput="getCode" value="{{code}}" maxlength="6" placeholder="请输入验证码"></input>
+					<text class="code" bindtap="jumpCode">{{getmsg}}</text>
+				</view>
+			</view>
+			<view class="modelBottom flex">
+				<view class="flex-1 flex_center cancle" bindtap="cancle">取消</view>
+				<view class="flex-1 flex_center sucess" bindtap="sucess">确定</view>
+			</view>
+		</view>
+	</view>
+</view>

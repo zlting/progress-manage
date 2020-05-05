@@ -1,0 +1,5 @@
+.main{
+  padding:30rpx;
+  font-size: 30rpx;
+  color: #333;
+}

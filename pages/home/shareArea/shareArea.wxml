@@ -1,0 +1,52 @@
+<view class="main">
+	<!-- <view style="z-index:-1">
+</view> -->
+	<back text="认证共享区" bgColor="rgba(249, 148, 87, 0);" />
+
+	<view>
+		<view class="area_main">
+			<image class="area_icon" src="/img/index/area_icon.png"></image>
+			<view class="area_name">{{name}}</view>
+		</view>
+		<view class="area_content">
+			<view class="flex_center week">
+				<view class="weekTitle">姓名</view>
+				<view class="flex-1 flex_center" style="justify-content:flex-end">
+					<text style="font-size:30rpx;color:#666" wx:if="{{userInfo.userNames}}">{{userInfo.userNames}}</text>
+					<input placeholder="请输入姓名(4个字符)" wx:else maxlength="4" bindinput="getUserName" value="{{userName}}" placeholder-style="font-size:30rpx;color:#ccc"></input>
+				</view>
+			</view>
+			<view class="flex_center week">
+				<view class="weekTitle">手机号</view>
+				<view class="flex-1 " style="justify-content:flex-end;text-align:right">
+					<text style="font-size:30rpx;color:#666">{{userInfo.userMobile}}</text>
+				</view>
+			</view>
+			<view class="flex_center week">
+				<view class="weekTitle">所在地区</view>
+				<view class="flex-1 " style="justify-content:flex-end;text-align:right">
+					<text style="color:#666;font-size:30rpx" wx:if="{{province}}">{{province}} {{city}} {{dist}}</text>
+					<text style="color:#64A3EA;font-size:30rpx" wx:else bindtap="getLocation">获取地理位置信息</text>
+				</view>
+			</view>
+		</view>
+		<view class="bottomBtn" bindtap="apply">
+			<btn text="提交" />
+		</view>
+		<view class="bottomText">
+			<button class="menu-btn" size="mini" type="default" plain="true" hover-class="none" open-type="contact">
+				<text class="text">如有其它疑问，请联系</text>
+				<text class="call">近邻在线客服</text>
+			</button>
+		</view>
+	</view>
+	<view class="alert" wx:if="{{!alertType}}">
+		<view class="alertContent">
+			<view class="alertText">您当前已拥有共享区身份，重新认证24小时后生效，是否重新认证？</view>
+			<view class="alertBtn">
+				<view class="cancle flex-1" bindtap="cancle">取消</view>
+				<view class="sucess flex-1" bindtap="jumpDetail">确定</view>
+			</view>
+		</view>
+	</view>
+</view>

@@ -1,0 +1,1497 @@
+{
+	"description": "项目配置文件",
+	"packOptions": {
+		"ignore": []
+	},
+	"setting": {
+		"urlCheck": false,
+		"es6": true,
+		"enhance": true,
+		"postcss": true,
+		"preloadBackgroundData": false,
+		"minified": false,
+		"newFeature": true,
+		"coverView": true,
+		"autoAudits": true,
+		"showShadowRootInWxmlPanel": true,
+		"scopeDataCheck": true,
+		"uglifyFileName": true,
+		"checkInvalidKey": true,
+		"checkSiteMap": true,
+		"uploadWithSourceMap": true,
+		"babelSetting": {
+			"ignore": [],
+			"disablePlugins": [],
+			"outputPath": ""
+		},
+		"bundle": true
+	},
+	"compileType": "miniprogram",
+	"libVersion": "2.10.4",
+	"appid": "wx60a97c2919d7a432",
+	"projectname": "progress-manage",
+	"cloudfunctionTemplateRoot": "",
+	"watchOptions": {
+		"ignore": []
+	},
+	"debugOptions": {
+		"hidedInDevtools": []
+	},
+	"scripts": {},
+	"simulatorType": "wechat",
+	"simulatorPluginLibVersion": {},
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"list": []
+		},
+		"gamePlugin": {
+			"current": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": -1,
+			"list": [
+				{
+					"id": -1,
+					"name": "pages/home/activityDetail/activityDetail",
+					"pathName": "pages/home/activityDetail/activityDetail",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 1,
+					"name": "pages/home/evaluate/evaluate",
+					"pathName": "pages/home/evaluate/evaluate",
+					"query": "id=198",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/home/activityDetail/activityDetail",
+					"pathName": "pages/home/activityDetail/activityDetail",
+					"query": "id=64&type=1",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/home/voteRule/voteRule",
+					"pathName": "pages/home/voteRule/voteRule",
+					"query": "id=64",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/home/evaluate/evaluate",
+					"pathName": "pages/home/evaluate/evaluate",
+					"query": "id=198",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/home/changeHouse/changeHouse",
+					"pathName": "pages/home/changeHouse/changeHouse",
+					"query": "id=64&type=1",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/home/messageDetail/messageDetail",
+					"pathName": "pages/home/messageDetail/messageDetail",
+					"query": "id=198",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/home/index/index",
+					"pathName": "pages/home/questionnaire/questionnaire",
+					"query": "id=198",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/home/userinfo/userinfo",
+					"pathName": "pages/home/userinfo/userinfo",
+					"query": "userId=198",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/home/userinfo/userinfo",
+					"pathName": "pages/home/userinfo/userinfo",
+					"query": "userId=72",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/home/postMessage/postMessage",
+					"pathName": "pages/home/postMessage/postMessage",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/home/approveArea/approveArea",
+					"pathName": "pages/home/approveArea/approveArea",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/home/openArea/openArea",
+					"pathName": "pages/home/openArea/openArea",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/home/changeHouse/changeHouse",
+					"pathName": "pages/home/changeHouse/changeHouse",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/home/attestationArea/attestationArea",
+					"pathName": "pages/home/attestationArea/attestationArea",
+					"query": "communityId=8&distId=310113",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/home/approveArea/approveArea",
+					"pathName": "pages/home/approveArea/approveArea",
+					"query": "communityId=8&distId=310113",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/home/index/index",
+					"pathName": "pages/home/evaluate/evaluate",
+					"query": "communityId=8&distId=310113%24name",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/home/evaluate/evaluate",
+					"pathName": "pages/home/evaluate/evaluate",
+					"query": "id=198",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/home/approveArea/approveArea",
+					"pathName": "pages/home/approveArea/approveArea",
+					"query": "id=198",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/home/approveArea/approveArea",
+					"pathName": "pages/home/approveArea/approveArea",
+					"query": "id=198",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/home/attestationArea/attestationArea",
+					"pathName": "pages/home/attestationArea/attestationArea",
+					"query": "communityId=8&distId=310113&name=%E9%94%A6%E7%BB%A3%E5%8D%8E%E5%9F%8E11%E8%A1%97%E5%8C%BA",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/home/attestationArea/attestationArea",
+					"pathName": "pages/home/attestationArea/attestationArea",
+					"query": "communityId=8&distId=310113&name=%E9%94%A6%E7%BB%A3%E5%8D%8E%E5%9F%8E11%E8%A1%97%E5%8C%BA",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/home/submitSucess/submitSucess",
+					"pathName": "pages/home/submitSucess/submitSucess",
+					"query": "communityId=8&distId=310113&name=%E9%94%A6%E7%BB%A3%E5%8D%8E%E5%9F%8E11%E8%A1%97%E5%8C%BA",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/home/changeHouse/changeHouse",
+					"pathName": "pages/home/changeHouse/changeHouse",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/userInfo/index/index",
+					"pathName": "pages/userInfo/index/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/userInfo/changeUser/changeUser",
+					"pathName": "pages/userInfo/changeUser/changeUser",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/userInfo/myRelease/myRelease",
+					"pathName": "pages/userInfo/myRelease/myRelease",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/home/evaluate/evaluate",
+					"pathName": "pages/home/evaluate/evaluate",
+					"query": "id=217",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/userInfo/myRelease/myRelease",
+					"pathName": "pages/userInfo/myRelease/myRelease",
+					"query": "id=217",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/userInfo/index/index",
+					"pathName": "pages/userInfo/index/index",
+					"query": "id=217",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/userInfo/myInterest/myInterest",
+					"pathName": "pages/userInfo/myInterest/myInterest",
+					"query": "id=217",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/userInfo/index/index",
+					"pathName": "pages/userInfo/index/index",
+					"query": "id=217",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/userInfo/myInterest/myInterest",
+					"pathName": "pages/userInfo/myInterest/myInterest",
+					"query": "id=217",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/home/userinfo/userinfo",
+					"pathName": "pages/home/userinfo/userinfo",
+					"query": "userId=196",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/userInfo/index/index",
+					"pathName": "pages/userInfo/index/index",
+					"query": "userId=196",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/userInfo/myInterest/myInterest",
+					"pathName": "pages/userInfo/myInterest/myInterest",
+					"query": "userId=196",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/userInfo/myInterest/myInterest",
+					"pathName": "pages/userInfo/myInterest/myInterest",
+					"query": "userId=196",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/userInfo/index/index",
+					"pathName": "pages/userInfo/index/index",
+					"query": "userId=196",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/userInfo/myTurn/myTurn",
+					"pathName": "pages/userInfo/myTurn/myTurn",
+					"query": "userId=196",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/userInfo/oldTrun/oldTrun",
+					"pathName": "pages/userInfo/oldTrun/oldTrun",
+					"query": "userId=196",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/userInfo/turnDetail/turnDetail",
+					"pathName": "pages/userInfo/turnDetail/turnDetail",
+					"query": "id=307",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/userInfo/applyTrun/applyTrun",
+					"pathName": "pages/userInfo/applyTrun/applyTrun",
+					"query": "id=307",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/userInfo/myTurn/myTurn",
+					"pathName": "pages/userInfo/myTurn/myTurn",
+					"query": "id=307",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/userInfo/earnestPeople/earnestPeople",
+					"pathName": "pages/userInfo/earnestPeople/earnestPeople",
+					"query": "id=307",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/userInfo/recommend/recommend",
+					"pathName": "pages/userInfo/recommend/recommend",
+					"query": "id=307",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/userInfo/myVote/myVote",
+					"pathName": "pages/userInfo/myVote/myVote",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/userInfo/index/index",
+					"pathName": "pages/userInfo/index/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/userInfo/myQuestionnaire/myQuestionnaire",
+					"pathName": "pages/userInfo/myQuestionnaire/myQuestionnaire",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/userInfo/qusetionDetail/qusetionDetail",
+					"pathName": "pages/userInfo/qusetionDetail/qusetionDetail",
+					"query": "id=26",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/userInfo/myAbility/myAbility",
+					"pathName": "pages/userInfo/myAbility/myAbility",
+					"query": "id=26",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/help/issueCapacity/issueCapacity",
+					"pathName": "pages/help/issueCapacity/issueCapacity",
+					"query": "id=26",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/userInfo/myRegistration/myRegistration",
+					"pathName": "pages/userInfo/myRegistration/myRegistration",
+					"query": "id=26",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/userInfo/applyDetail/applyDetail",
+					"pathName": "pages/userInfo/applyDetail/applyDetail",
+					"query": "id=7",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/help/index/index",
+					"pathName": "pages/help/index/index",
+					"query": "id=7",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/help/moreSos/moreSos",
+					"pathName": "pages/help/moreSos/moreSos",
+					"query": "communityId=8",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/help/index/index",
+					"pathName": "pages/help/index/index",
+					"query": "communityId=8",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/help/search/search",
+					"pathName": "pages/help/search/search",
+					"query": "communityId=8&userName=%E6%B5%8B%E8%AF%95",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/help/search/search",
+					"pathName": "pages/help/search/search",
+					"query": "communityId=8&userName=测试",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/help/capacity/capacity",
+					"pathName": "pages/help/capacity/capacity",
+					"query": "id=321",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/help/capacity/capacity",
+					"pathName": "pages/help/capacity/capacity",
+					"query": "userInfoId=321&communityId=8",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/help/capacity/capacity",
+					"pathName": "pages/help/capacity/capacity",
+					"query": "userInfoId=55&communityId=8",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/help/complain/complain",
+					"pathName": "pages/help/complain/complain",
+					"query": "identityId=1",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/help/helpDetail/helpDetail",
+					"pathName": "pages/help/helpDetail/helpDetail",
+					"query": "id=312",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/help/levelMsg/levelMsg",
+					"pathName": "pages/help/levelMsg/levelMsg",
+					"query": "userId=55&id=312",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/help/capacity/capacity",
+					"pathName": "pages/help/capacity/capacity",
+					"query": "userInfoId=55&communityId=8",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/help/pleaseMessage/pleaseMessage",
+					"pathName": "pages/help/pleaseMessage/pleaseMessage",
+					"query": "userInfoId=55&communityId=8",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/message/message",
+					"pathName": "pages/message/message",
+					"query": "userInfoId=55&communityId=8",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/userInfo/code/code",
+					"pathName": "pages/userInfo/code/code",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/userInfo/index/index",
+					"pathName": "pages/userInfo/index/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/userInfo/myPacket/myPacket",
+					"pathName": "pages/userInfo/myPacket/myPacket",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/userInfo/myPacket/myPacket",
+					"pathName": "pages/userInfo/myPacket/myPacket",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/userInfo/packetDetail/packetDetail",
+					"pathName": "pages/userInfo/packetDetail/packetDetail",
+					"query": "id=21",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/userInfo/myPacket/myPacket",
+					"pathName": "pages/userInfo/myPacket/myPacket",
+					"query": "id=21",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/home/index/index",
+					"pathName": "pages/home/drawSucess/drawSucess",
+					"query": "id=21",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/home/drawSucess/drawSucess",
+					"pathName": "pages/home/drawSucess/drawSucess",
+					"query": "id=19",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/help/complain/complain",
+					"pathName": "pages/help/complain/complain",
+					"query": "identityId=72",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/home/changeHouse/changeHouse",
+					"pathName": "pages/home/changeHouse/changeHouse",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/home/voteRule/voteRule",
+					"pathName": "pages/home/voteRule/voteRule",
+					"query": "id=71",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/userInfo/myAbility/myAbility",
+					"pathName": "pages/userInfo/myAbility/myAbility",
+					"query": "id=71",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/userInfo/myAbility/myAbility",
+					"pathName": "pages/userInfo/myAbility/myAbility",
+					"query": "id=71",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/userInfo/index/index",
+					"pathName": "pages/userInfo/index/index",
+					"query": "id=71",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/help/index/index",
+					"pathName": "pages/help/index/index",
+					"query": "id=71",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/help/index/index",
+					"pathName": "pages/help/index/index",
+					"query": "id=71",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/home/poster/poster",
+					"pathName": "pages/home/poster/poster",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/home/drawSucess/drawSucess",
+					"pathName": "pages/home/drawSucess/drawSucess",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/home/drawSucess/drawSucess",
+					"pathName": "pages/home/drawSucess/drawSucess",
+					"query": "id=37",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/home/poster/poster",
+					"pathName": "pages/home/poster/poster",
+					"query": "id=37",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/home/evaluate/evaluate",
+					"pathName": "pages/home/evaluate/evaluate",
+					"query": "id=222",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/userInfo/changeUser/changeUser",
+					"pathName": "pages/userInfo/changeUser/changeUser",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/userInfo/packetDetail/packetDetail",
+					"pathName": "pages/userInfo/packetDetail/packetDetail",
+					"query": "id=37",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/home/activityDetail/activityDetail",
+					"pathName": "pages/home/activityDetail/activityDetail",
+					"query": "id=51",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/home/shareArea/shareArea",
+					"pathName": "pages/home/shareArea/shareArea",
+					"query": "communityId=10&distId=310117&name=近邻松江共享区",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/home/shareArea/shareArea",
+					"pathName": "pages/home/shareArea/shareArea",
+					"query": "communityId=10&distId=310117&name=近邻松江共享区",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/home/userinfo/userinfo",
+					"pathName": "pages/home/userinfo/userinfo",
+					"query": "userId=212&infoId=55",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/home/userinfo/userinfo",
+					"pathName": "pages/home/userinfo/userinfo",
+					"query": "userId=55",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/userInfo/myInterest/myInterest",
+					"pathName": "pages/userInfo/myInterest/myInterest",
+					"query": "userId=55",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/userInfo/recommendSoft/recommendSoft",
+					"pathName": "pages/userInfo/recommendSoft/recommendSoft",
+					"query": "id=6",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/userInfo/myAbility/myAbility",
+					"pathName": "pages/userInfo/myAbility/myAbility",
+					"query": "id=6",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/home/index/index",
+					"pathName": "pages/home/poster/poster",
+					"query": "id=6",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/userInfo/code/code",
+					"pathName": "pages/userInfo/code/code",
+					"query": "id=6",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/userInfo/earnestPeople/earnestPeople",
+					"pathName": "pages/userInfo/earnestPeople/earnestPeople",
+					"query": "id=6",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/help/search/search",
+					"pathName": "pages/help/search/search",
+					"query": "id=6",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/help/search/search",
+					"pathName": "pages/help/search/search",
+					"query": "communityId=8&userName=",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/home/attestationArea/attestationArea",
+					"pathName": "pages/home/attestationArea/attestationArea",
+					"query": "communityId=8&distId=310113&name=锦绣华城11街区",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/userInfo/earnestPeople/earnestPeople",
+					"pathName": "pages/userInfo/earnestPeople/earnestPeople",
+					"query": "communityId=8&distId=310113&name=锦绣华城11街区",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/userInfo/myPacket/myPacket",
+					"pathName": "pages/userInfo/myPacket/myPacket",
+					"query": "communityId=8&distId=310113&name=锦绣华城11街区",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/userInfo/applyTrun/applyTrun",
+					"pathName": "pages/userInfo/applyTrun/applyTrun",
+					"query": "communityId=8&distId=310113&name=锦绣华城11街区",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/userInfo/oldTrun/oldTrun",
+					"pathName": "pages/userInfo/oldTrun/oldTrun",
+					"query": "communityId=8&distId=310113&name=锦绣华城11街区",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/userInfo/myRelease/myRelease",
+					"pathName": "pages/userInfo/myRelease/myRelease",
+					"query": "communityId=8&distId=310113&name=锦绣华城11街区",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/home/postMessage/postMessage",
+					"pathName": "pages/home/postMessage/postMessage",
+					"query": "communityId=8&distId=310113&name=锦绣华城11街区",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/help/capacity/capacity",
+					"pathName": "pages/help/capacity/capacity",
+					"query": "userInfoId=55&communityId=10",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/help/capacity/capacity",
+					"pathName": "pages/help/capacity/capacity",
+					"query": "userInfoId=55&communityId=10",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/home/index/index",
+					"pathName": "pages/home/html/html",
+					"query": "userInfoId=55&communityId=10",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/home/html/html",
+					"pathName": "pages/home/html/html",
+					"query": "id=6",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/home/changeHouse/changeHouse",
+					"pathName": "pages/home/changeHouse/changeHouse",
+					"query": "id=6",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/home/approveArea/approveArea",
+					"pathName": "pages/home/approveArea/approveArea",
+					"query": "id=6",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/home/approveArea/approveArea",
+					"pathName": "pages/home/approveArea/approveArea",
+					"query": "id=6",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/userInfo/earnestPeople/earnestPeople",
+					"pathName": "pages/userInfo/earnestPeople/earnestPeople",
+					"query": "id=6",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/help/issueCapacity/issueCapacity",
+					"pathName": "pages/help/issueCapacity/issueCapacity",
+					"query": "id=6",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/home/drawSucess/drawSucess",
+					"pathName": "pages/home/drawSucess/drawSucess",
+					"query": "id=49",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/home/userinfo/userinfo",
+					"pathName": "pages/home/userinfo/userinfo",
+					"query": "userId=75",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/userInfo/myInterest/myInterest",
+					"pathName": "pages/userInfo/myInterest/myInterest",
+					"query": "userId=75",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/home/index/index",
+					"pathName": "pages/home/index/index",
+					"query": "userId=75",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/userInfo/myInterest/myInterest",
+					"pathName": "pages/userInfo/myInterest/myInterest",
+					"query": "userId=75",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/userInfo/oldTrun/oldTrun",
+					"pathName": "pages/userInfo/oldTrun/oldTrun",
+					"query": "userId=75",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/help/moreSos/moreSos",
+					"pathName": "pages/help/moreSos/moreSos",
+					"query": "communityId=10",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/help/helpDetail/helpDetail",
+					"pathName": "pages/help/levelMsg/levelMsg",
+					"query": "userId=55&id=318",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/userInfo/myTurn/myTurn",
+					"pathName": "pages/userInfo/myTurn/myTurn",
+					"query": "userId=55&id=318",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/userInfo/index/index",
+					"pathName": "pages/userInfo/index/index",
+					"query": "userId=55&id=318",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/userInfo/advertising/advertising",
+					"pathName": "pages/userInfo/advertising/advertising",
+					"query": "userId=55&id=318",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/userInfo/packetDetail/packetDetail",
+					"pathName": "pages/userInfo/packetDetail/packetDetail",
+					"query": "id=77",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/home/index/index",
+					"pathName": "pages/home/forbidden/forbidden",
+					"query": "id=77",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/help/index/index",
+					"pathName": "pages/help/index/index",
+					"query": "id=77",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/help/index/index",
+					"pathName": "pages/help/index/index",
+					"query": "id=77",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/home/activityDetail/activityDetail",
+					"pathName": "pages/home/activityDetail/activityDetail",
+					"query": "id=67",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/home/voteRule/voteRule",
+					"pathName": "pages/home/voteRule/voteRule",
+					"query": "id=124",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/home/voteRule/voteRule",
+					"pathName": "pages/home/voteRule/voteRule",
+					"query": "id=133",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/help/index/index",
+					"pathName": "pages/help/index/index",
+					"query": "id=133",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/userInfo/myInterest/myInterest",
+					"pathName": "pages/userInfo/myInterest/myInterest",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/home/approveArea/approveArea",
+					"pathName": "pages/home/approveArea/approveArea",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/home/questionnaire/questionnaire",
+					"pathName": "pages/home/questionnaire/questionnaire",
+					"query": "id=113",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/home/approveArea/approveArea",
+					"pathName": "pages/home/approveArea/approveArea",
+					"query": "id=113",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/home/attestationArea/attestationArea",
+					"pathName": "pages/home/attestationArea/attestationArea",
+					"query": "communityId=12&distId=310113&name=%E6%B5%8B%E8%AF%95%E5%B0%8F%E5%8C%BAA&authenticate=true",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/home/messageDetail/messageDetail",
+					"pathName": "pages/home/messageDetail/messageDetail",
+					"query": "id=295",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/home/drawSucess/drawSucess",
+					"pathName": "pages/home/drawSucess/drawSucess",
+					"query": "id=95",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/home/drawSucess/drawSucess",
+					"pathName": "pages/home/drawSucess/drawSucess",
+					"query": "id=87",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/home/messageDetail/messageDetail",
+					"pathName": "pages/home/messageDetail/messageDetail",
+					"query": "id=295",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/userInfo/changeUser/changeUser",
+					"pathName": "pages/userInfo/changeUser/changeUser",
+					"query": "id=295",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/userInfo/oldTrun/oldTrun",
+					"pathName": "pages/userInfo/oldTrun/oldTrun",
+					"query": "id=295",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/userInfo/index/index",
+					"pathName": "pages/userInfo/index/index",
+					"query": "id=295",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/userInfo/myTurn/myTurn",
+					"pathName": "pages/userInfo/myTurn/myTurn",
+					"query": "id=295",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/userInfo/myAbility/myAbility",
+					"pathName": "pages/userInfo/myAbility/myAbility",
+					"query": "id=295",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/home/approveArea/approveArea",
+					"pathName": "pages/home/approveArea/approveArea",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/userInfo/index/index",
+					"pathName": "pages/userInfo/index/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/userInfo/myPacket/myPacket",
+					"pathName": "pages/userInfo/myPacket/myPacket",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/userInfo/qusetionDetail/qusetionDetail",
+					"pathName": "pages/userInfo/qusetionDetail/qusetionDetail",
+					"query": "id=135",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/userInfo/myAbility/myAbility",
+					"pathName": "pages/userInfo/myAbility/myAbility",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/home/activityDetail/activityDetail",
+					"pathName": "pages/home/activityDetail/activityDetail",
+					"query": "id=81",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/userInfo/myPacket/myPacket",
+					"pathName": "pages/userInfo/myPacket/myPacket",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/home/drawSucess/drawSucess",
+					"pathName": "pages/home/drawSucess/drawSucess",
+					"query": "id=107",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/home/evaluate/evaluate",
+					"pathName": "pages/home/evaluate/evaluate",
+					"query": "id=107",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/home/evaluate/evaluate",
+					"pathName": "pages/home/evaluate/evaluate",
+					"query": "id=359",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/home/postMessage/postMessage",
+					"pathName": "pages/home/postMessage/postMessage",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/home/changeHouse/changeHouse",
+					"pathName": "pages/home/changeHouse/changeHouse",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/userInfo/changeUser/changeUser",
+					"pathName": "pages/userInfo/changeUser/changeUser",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/home/activityDetail/activityDetail",
+					"pathName": "pages/home/activityDetail/activityDetail",
+					"query": "id=84",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/userInfo/changeUser/changeUser",
+					"pathName": "pages/userInfo/changeUser/changeUser",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/userInfo/index/index",
+					"pathName": "pages/userInfo/index/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/help/index/index",
+					"pathName": "pages/help/index/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/home/evaluate/evaluate",
+					"pathName": "pages/home/evaluate/evaluate",
+					"query": "id=374",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/userInfo/myRegistration/myRegistration",
+					"pathName": "pages/userInfo/myRegistration/myRegistration",
+					"query": "id=374",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/userInfo/myPacket/myPacket",
+					"pathName": "pages/userInfo/myPacket/myPacket",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/userInfo/myRegistration/myRegistration",
+					"pathName": "pages/userInfo/myRegistration/myRegistration",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/help/index/index",
+					"pathName": "pages/help/index/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/userInfo/index/index",
+					"pathName": "pages/userInfo/index/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/home/changeHouse/changeHouse",
+					"pathName": "pages/home/changeHouse/changeHouse",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/help/capacity/capacity",
+					"pathName": "pages/help/capacity/capacity",
+					"query": "userInfoId=96&communityId=8",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/home/changeHouse/changeHouse",
+					"pathName": "pages/home/changeHouse/changeHouse",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/home/html/html",
+					"pathName": "pages/home/html/html",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/home/userinfo/userinfo",
+					"pathName": "pages/home/userinfo/userinfo",
+					"query": "userId=94",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/home/index/index",
+					"pathName": "pages/home/drawSucess/drawSucess",
+					"query": "id=127",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/home/drawSucess/drawSucess",
+					"pathName": "pages/home/drawSucess/drawSucess",
+					"query": "id=157",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/userInfo/myTurn/myTurn",
+					"pathName": "pages/userInfo/myTurn/myTurn",
+					"query": "id=157",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/home/index/index",
+					"pathName": "pages/home/index/index",
+					"query": "id=128&userInfoid=64",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/home/index/index",
+					"pathName": "pages/home/index/index",
+					"query": "id=128&userInfoId=64",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/home/approveArea/approveArea",
+					"pathName": "pages/home/approveArea/approveArea",
+					"query": "id=128&userInfoId=64",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/home/changeHouse/changeHouse",
+					"pathName": "pages/home/changeHouse/changeHouse",
+					"query": "id=128&userInfoId=64",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/home/attestationArea/attestationArea",
+					"pathName": "pages/home/attestationArea/attestationArea",
+					"query": "id=128&userInfoId=64",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/home/index/index",
+					"pathName": "pages/home/index/index",
+					"query": "communityId=20&distId=310112&dist=%E9%97%B5%E8%A1%8C%E5%8C%BA&name=%E9%B8%BF%E6%99%AF%E5%9B%AD%E5%B0%8F%E5%8C%BA& communityId=20&distId=310112&dist=%E9%97%B5%E8%A1%8C%E5%8C%BA&name=%E9%B8%BF%E6%99%AF%E5%9B%AD%E5%B0%8F%E5%8C%BA&authenticate=true =true",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/home/attestationArea/attestationArea",
+					"pathName": "pages/home/attestationArea/attestationArea",
+					"query": "communityId=17&distId=310112&dist=%E9%97%B5%E8%A1%8C%E5%8C%BA&name=%E4%B9%9D%E4%BA%AD%E5%B0%8F%E5%8C%BA111&authenticate=true",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/home/attestationArea/attestationArea",
+					"pathName": "pages/home/attestationArea/attestationArea",
+					"query": "communityId=17&distId=310112&dist=%E9%97%B5%E8%A1%8C%E5%8C%BA&authenticate=true&authenticate=true",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/home/attestationArea/attestationArea",
+					"pathName": "pages/home/attestationArea/attestationArea",
+					"query": "communityId=24&distId=310112&dist=%E9%97%B5%E8%A1%8C%E5%8C%BA&name=%E5%8D%8E%E5%94%90%E8%8B%91%E5%B0%8F%E5%8C%BA&authenticate=false",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/home/changeHouse/changeHouse",
+					"pathName": "pages/home/changeHouse/changeHouse",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/home/messageDetail/messageDetail",
+					"pathName": "pages/home/messageDetail/messageDetail",
+					"query": "id=250",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/home/messageDetail/messageDetail",
+					"pathName": "pages/home/messageDetail/messageDetail",
+					"query": "id=423",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/home/questionnaire/questionnaire",
+					"pathName": "pages/home/questionnaire/questionnaire",
+					"query": "id=134",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/home/openArea/openArea",
+					"pathName": "pages/home/openArea/openArea",
+					"query": "id=134",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/home/shareArea/shareArea",
+					"pathName": "pages/home/shareArea/shareArea",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/userInfo/recommendSoft/recommendSoft",
+					"pathName": "pages/userInfo/recommendSoft/recommendSoft",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/home/index/index",
+					"pathName": "pages/home/drawSucess/drawSucess",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/userInfo/recommendSoft/recommendSoft",
+					"pathName": "pages/userInfo/recommendSoft/recommendSoft",
+					"query": "id=6&type=1",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/home/index/index",
+					"pathName": "pages/home/forbidden/forbidden",
+					"query": "id=6&type=1",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/home/index/index",
+					"pathName": "pages/home/poster/poster",
+					"query": "id=18585",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/home/index/index",
+					"pathName": "pages/home/poster/poster",
+					"query": "id=18585",
+					"scene": null
+				}
+			]
+		}
+	}
+}

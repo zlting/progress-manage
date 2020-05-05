@@ -1,0 +1,246 @@
+<view wx:if="{{forbidden}}">
+	<view class="top">
+		<image class="top_bg" src="/img/index/top_bg.png"></image>
+		<view class="top_main flex_center">
+			<view class="flex-1" style="margin-left:30rpx;margin-top: -6rpx;">
+				<view class="flex_center" bindtap="jumpHouse">
+				<!-- 近邻松江共享区 -->
+					<text class="top_address">{{userInfo.currentCommunity.communityName}}</text>
+					<image class="top_icon" src="/img/index/top_icon.png"></image>
+				</view>
+				<view style="margin-top:12rpx">
+					<text class="top_welcome">欢迎您</text>
+					<text class="top_num" >入驻人数：{{number}}</text>
+				</view>
+			</view>
+			<view wx:if="{{packType}}">
+				<image class="icon_packetGif" wx:if="{{!animationType}}" bindtap="start" src="https://jinlin-property.oss-cn-shanghai.aliyuncs.com/img/8MAfHWBRx6NfBJAc2jWHJ32yrZkGRCGR.gif"></image>
+				<image class="icon_packet" wx:else bindtap="start" src="/img/index/icon_packet.png"></image>
+			</view>
+		</view>
+	</view>
+	<view class="content">
+		<!-- 轮播 -->
+		<view class="swiper" wx:if="{{bannerList.length>0}}">
+			<swiper  autoplay circular  class="swiper_item" autoplay="true"    bindchange="change" indicator-color="rgba(248,122,47,1);" indicator-active-color="#F87A2F">
+				<!-- <block> -->
+				<!-- ?x-oss-process=image/resize,m_fill,h_180/quality,Q_100 -->
+					<swiper-item bindtap="jumpadDetail"  wx:for="{{bannerList}}" wx:for-index="imgindex"  wx:key="imgindex" data-id="{{item.id}}" style="text-align: center;">
+						<image  src="{{item.adImg}}?x-oss-process=image/resize,m_fill,w_690,h_180/quality,Q_100"  class="swiper-image"  height="180" />
+					</swiper-item>
+				<!-- </block> -->
+			</swiper>
+			<view class="flex_center" style="justify-content: center">
+				<view wx:for="{{bannerList}}" wx:for-index="textindex" wx:key="textindex" class="{{index==textindex?'icon_swiper':'icon_swiper_false'}}"></view>
+			</view>
+		</view>
+		<!-- 广告区 -->
+		<view class="swiper_column_div">
+			<image class="swiper_column" src="/img/index/swiper_column.png"></image>
+			<view class="column_main flex_center">
+				<view   class="flex advising">
+					<image class="icon_advertising" src="/img/index/icon_advertising.png"></image>
+					<view class="flex-1 swiper_content">
+						<swiper wx:if="{{topInfoList.length>0}}" style="height:152rpx" autoplay="true" interval="{{interval}}" duration="{{duration}}" vertical circular>
+							<block wx:for="{{topInfoList}}" wx:for-index="_index" wx:key="_index">
+								<swiper-item class="swiper_content_item">
+									<view class="flex_center" wx:for="{{item}}" wx:key="index" data-item="{{item}}" bindtap="jumpNotice">
+										<image class="icon_swiper_left" src="/img/index/icon_swiper_left.png"></image>
+										<view class="flex-1 swiper_name ellipsis">{{item.title}}</view>
+										<image class="icon_swiper_right" src="/img/index/icon_swiper_right.png"></image>
+									</view>
+								</swiper-item>
+							</block>
+						</swiper>
+						<view wx:else class="swiper_contents">暂无公告</view>
+					</view>
+				</view>
+			</view>
+		</view>
+		<!-- 切换 -->
+		<view>
+			<view class='container'>
+				<!--Tab布局-->
+				<view class='title' wx:if="{{share}}">
+					<scroll-view scroll-x="true" style=" white-space: nowrap; display: inline-block">
+						<view class='titleSel' wx:for="{{tabList}}" wx:for-index="idx" wx:key="index" bindtap='titleClick' data-idx='{{idx}}' data-id='{{item.id}}'>
+							<view class="sel">
+								<text class="{{idx == currentIndex ? 'tabItemtrue':'tabItemfalse'}}">{{item.typeName}}</text>
+								<hr class="{{idx == currentIndex ? 'headerLineSel' : 'headerLineUnsel'}}" />
+							</view>
+						</view>
+					</scroll-view>
+				</view>
+				<!--内容布局-->
+				<!-- <swiper class='swiperType' bindchange='pagechange' current='{{currentIndex}}'> -->
+				<!-- <block wx:for="{{tabList}}" wx:for-index="_index" wx:key="_index"> -->
+				<!-- style="overflow:{{scrollTop>=430?'auto':''}}"  -->
+				<!-- <swiper-item style="overflow:auto"> -->
+				<view wx:if="{{list.length>0 }}">
+					<view wx:for="{{list}}" class='recordItem' wx:key="index">
+						<view wx:if="{{currentIndex===1}}">
+							<view wx:if="{{!item.isTop && item.type===0}}">
+								<view class="flex_center" bindtap="jumpUserInfo" data-userId="{{item.userInfoId}}" data-index="{{index}}">
+									<image class="icon_headImg" src="{{item.headImgUrl||'/img/index/icon_headImg.png'}}"></image>
+									<text class="tabItemName flex-1">{{item.roleName?item.roleName+'：':''}}{{item.userName || ''}}</text>
+								</view>
+								<view class="flex_center" style="padding-right:30rpx">
+									<view class="icon_headImg"></view>
+									<view style="flex-direction: column" class="flex-1 flex">
+										<text class="{{item.contentType?'ellipsisText':'wudetail'}}">{{item.content||''}}</text>
+										<view class="open" catchtap='ellipsis' wx:if="{{item.content.length>50}}" data-index="{{index}}" data-type="{{item.contentType}}">{{item.contentType?'展开':'收起'}}</view>
+										<view class="flex" style="flex-wrap: wrap;"  wx:if="{{item.img.length>0}}">
+										 <!-- bindtap="previewImage" -->
+											<image wx:for="{{item.img}}" bindtap="previewImage" wx:for-item="val" wx:for-index="key" wx:key="key" class="tabImgList" data-item="{{item.img}}" data-src="{{val}}" src="{{val}}?x-oss-process=image/resize,m_fill,w_180,h_180/quality,Q_100"></image>
+										</view>
+										<view class="flex" style="padding-bottom:40rpx;border-bottom:2rpx solid #F6F6F6">
+											<text class="time flex-1">{{item.time}}</text>
+											<view class="flex_center bottomNum">
+												<view class="flex_center">
+													<view class="flex_center" catchtap="addLike" data-isThumbUp="{{item.isThumbUp}}" data-index="{{index}}">
+														<image class="imgIcon" wx:if="{{item.isThumbUp}}" src="/img/index/icon_give_true.png"></image>
+														<image class="imgIcon" wx:else src="/img/index/icon_give_false.png"></image>
+														<text style="color:{{item.isThumbUp?'#F87A2F':''}}">{{item.likeNum || 0}}</text>
+													</view>
+												</view>
+											</view>
+											<view class="flex_center" wx:if="{{item.isEvaluate}}" style="margin-left:50rpx" bindtap="jumpEvalute" data-id="{{item.id}}">
+												<image class="imgIcon" src="/img/index/icon_message.png"></image>
+												<text>{{item.evaluateNum}}</text>
+											</view>
+										</view>
+									</view>
+								</view>
+							</view>
+							<view wx:else>
+								<view class="flex_center" bindtap="jumpUserInfo" data-userId="{{item.userInfoId}}" data-index="{{index}}">
+									<image class="icon_headImg" src="{{item.headImgUrl||'/img/index/icon_headImg.png'}}"></image>
+									<text class="tabItemName flex-1">{{item.roleName?item.roleName+'：':''}}{{item.userName || ''}}</text>
+								</view>
+								<view class="flex_center" style="padding-right:30rpx" bindtap="jumpDetail" data-id="{{item.id}}"  data-type="{{item.type}}">
+									<view class="icon_headImg"></view>
+									<view style="display:flex;flex-direction: column;" class="flex-1">
+										<view class="tabItemContent flex">
+											<image class="tabImg" src="{{item.img}}" wx:if="{{item.type!==3}}"></image>
+											<text class="tabItemDetail line_ellipsis flex-1">{{item.title || ''}}</text>
+										</view>
+										<view class="flex" style="margin-top:20rpx;padding-bottom:40rpx;border-bottom:2rpx solid #F6F6F6">
+											<text class="time flex-1">{{item.time}}</text>
+											<!-- bindtap="lookDetail" data-id="{{item.id}}" -->
+											<text class="lookDetail"  wx:if="{{item.type===0}}">查看详情</text>
+											<!-- bindtap="jumpDetail"  data-id="{{item.id}}"  data-type="{{item.type}}" -->
+											<text class="lookDetail"   wx:else>{{item.type===1?'立即投票':item.type===2?'立即报名':'立即填写'}}</text>
+										</view>
+									</view>
+								</view>
+							</view>
+						</view>
+						<view wx:else>
+							<view wx:if="{{item.isTop}}">
+								<view class="flex_center" bindtap="jumpUserInfo" data-userId="{{item.userInfoId}}" data-index="{{index}}">
+									<image class="icon_headImg" src="{{item.headImgUrl||'/img/index/icon_headImg.png'}}"></image>
+									<text class="tabItemName flex-1">{{item.roleName?item.roleName+'：':''}}{{item.userName || ''}}</text>
+								</view>
+								<view class="flex_center" style="padding-right:30rpx" bindtap="jumpDetail" data-id="{{item.id}}"  data-type="{{item.type}}">
+									<view class="icon_headImg"></view>
+									<view style="display:flex;flex-direction: column;" class="flex-1">
+										<view class="tabItemContent flex">
+											<image class="tabImg" src="{{item.img}}"></image>
+											<text class="tabItemDetail line_ellipsis flex-1">{{item.title || ''}}</text>
+										</view>
+										<view class="flex" style="margin-top:20rpx;padding-bottom:40rpx;border-bottom:2rpx solid #F6F6F6">
+											<text class="time flex-1">{{item.time}}</text>
+											<text class="lookDetail">查看详情</text>
+										</view>
+									</view>
+								</view>
+							</view>
+							<view wx:if="{{!item.isTop}}">
+								<view class="flex_center" bindtap="jumpUserInfo" data-userId="{{item.userInfoId}}" data-index="{{index}}">
+									<image class="icon_headImg" src="{{item.headImgUrl||'/img/index/icon_headImg.png'}}"></image>
+									<text class="tabItemName flex-1">{{item.roleName?item.roleName+'：':''}}{{item.userName || ''}}</text>
+								</view>
+								<view class="flex_center" style="padding-right:30rpx">
+									<view class="icon_headImg"></view>
+									<view style="flex-direction: column" class="flex-1 flex">
+										<!-- {{ellipsis?'ellipsis':'unellipsis'}} -->
+										<text class="{{item.contentType?'ellipsisText':'wudetail'}}">{{item.content||''}}</text>
+										<view class="open" catchtap='ellipsis' wx:if="{{item.content.length>50}}" data-index="{{index}}" data-type="{{item.contentType}}">{{item.contentType?'展开':'收起'}}</view>
+										<view class="flex" style="flex-wrap: wrap;" wx:if="{{item.img.length>0}}">
+										<!-- bindtap="previewImage" -->
+											<image wx:for="{{item.img}}" bindtap="previewImage" wx:for-item="val" wx:for-index="key" wx:key="key" class="tabImgList" data-item="{{item.img}}" data-src="{{val}}"  src="{{val}}?x-oss-process=image/resize,m_fill,w_180,h_180/quality,Q_100"></image>
+										</view>
+										<view class="flex" style="padding-bottom:40rpx;border-bottom:2rpx solid #F6F6F6">
+											<text class="time flex-1">{{item.time}}</text>
+											<view class="flex_center bottomNum">
+												<view class="flex_center">
+													<view class="flex_center" catchtap="addLike" data-isThumbUp="{{item.isThumbUp}}" data-index="{{index}}">
+														<image class="imgIcon" wx:if="{{item.isThumbUp}}" src="/img/index/icon_give_true.png"></image>
+														<image class="imgIcon" wx:else src="/img/index/icon_give_false.png"></image>
+														<text style="color:{{item.isThumbUp?'#F87A2F':''}}">{{item.likeNum || 0}}</text>
+													</view>
+												</view>
+											</view>
+											<view class="flex_center" wx:if="{{item.isEvaluate}}" bindtap="jumpEvalute" data-id="{{item.id}}" style="margin-left:50rpx">
+												<image class="imgIcon" src="/img/index/icon_message.png"></image>
+												<text>{{item.evaluateNum}}</text>
+											</view>
+										</view>
+									</view>
+								</view>
+							</view>
+						</view>
+						<!-- </view> -->
+						<!-- <view class='name'>昵称：{{item}}</view> -->
+					</view>
+				</view>
+				<view wx:if="{{list.length===0 && !loadMore}}">
+					<view class="flex_empty">
+						<image class="msg_empty" src="/img/index/msg_empty.png"></image>
+						<view class="emptyText">数据为空~</view>
+					</view>
+				</view>
+				<!-- </swiper-item> -->
+				<!-- </block> -->
+				<!-- </swiper> -->
+			</view>
+		</view>
+		<!-- 图标 -->
+		<view class="icon_div" bindtap="jumpIssue" wx:if="{{releaseNum>0}}">
+			<image class="icon_index" src="/img/index/icon_index.png"></image>
+			<text class="issueNum" wx:if="{{releaseNum>=0 && releaseNum<100}}">{{releaseNum}}</text>
+			<text class="issueNum" wx:if="{{releaseNum>=100}}">99+</text>
+			<text class="issueNum" wx:if="{{releaseNum<0}}">0</text>
+		</view>
+	</view>
+	<!-- 红包动画 -->
+	<!-- <view class="circle" animation="{{ani}}" wx:if="{{animationType}}">
+		<view class="circle_icon"></view>
+	</view> -->
+	<!-- alertType -->
+	<view class="packetAlert" wx:if="{{alertType}}">
+		<view class="packet">
+			<view class="alertContent">
+				<image class="headImgUrl" src="{{packList.headImgUrl+'?x-oss-process=image/resize,m_fill,w_128,h_128/quality,Q_100'||'/img/user/code_headimg.png'}}"></image>
+				<view class="headName">{{packList.userName || ''}}</view>
+				<image class="icon3" bindtap="jumpOpen" src="https://jinlin-property.oss-cn-shanghai.aliyuncs.com/img/r6WxbGhd4Qs4EQ87MSAjTEF3QN5J438cnZ2X"></image>
+				<view wx:if="{{packList.share}}">
+					<view class="alertDetail line_ellipsis" wx:if="{{!packList.kilometers}}">仅限{{userInfo.currentCommunity.dist}}用户领取</view>
+					<view class="alertDetail line_ellipsis" wx:else>仅限{{packList.centerAddress}}周围{{packList.kilometers}}公里内的用户领取</view>
+				</view>
+				<view class="alertDetail line_ellipsis" wx:else>仅限{{packList.scopeName}}用户领取</view>
+
+			</view>
+			<image class="icon1" src="https://jinlin-property.oss-cn-shanghai.aliyuncs.com/img/EZpnH8m2T2wiGYNJfXHibER5CEMtAJ3M.png"></image>
+			<image class="icon2" src="https://jinlin-property.oss-cn-shanghai.aliyuncs.com/img/HdatQsyBBNmKMR8ecfz6zyA5WbJ4Xji2.png"></image>
+		</view>
+		<image class="close_icon" bindtap="closeAlertType" src="/img/index/close_icon.png"></image>
+	</view>
+	<!-- 首次进来的弹框 -->
+	<view class="packetAlert" wx:if="{{alertImg && ad!=null}}">
+		<view class="packetImg">
+			<image bindtap="jumpAlertDetail" class="img1" src="{{ad.adImg}}?x-oss-process=image/resize,m_fill,w_550,h_720/quality,Q_100"></image>
+			<image class="img2" bindtap="closeAlertImg" src="/img/index/alert_close.png"></image>
+		</view>
+	</view>
+</view>

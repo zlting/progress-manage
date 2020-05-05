@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "报名详情",
+  "usingComponents": {
+    "btn":"/components/btn/btn"
+  }
+} 

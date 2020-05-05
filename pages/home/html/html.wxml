@@ -1,0 +1,13 @@
+<view class="main">
+	<view wx:if="{{obj.headimgUrl || obj.userName}}">
+		<image class="capacity_icon" src="/img/help/capacity_icon.png"></image>
+		<view class="top flex_center">
+			<image class="headImg" src="{{obj.headimgurl}}?x-oss-process=image/resize,m_fill,w_120,h_120/quality,Q_100"></image>
+			<text class="headName">{{obj.userName}}</text>
+		</view>
+	</view>
+	<view class="content">
+		<view style="padding-bottom:20rpx">{{obj.adContent}}</view>
+		<image class="icon_img" wx:for="{{obj.adBanner}}" bindtap="previewImage" wx:key="index" mode="widthFix" data-src="{{item}}" src="{{item}}"></image>
+	</view>
+</view>

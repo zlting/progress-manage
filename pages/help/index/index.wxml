@@ -1,0 +1,98 @@
+<view>
+	<view class="top">
+		<view class="flex top_title">
+			<view class="top_title_text">互助</view>
+			<view class="top_title_right">{{address}}</view>
+		</view>
+		<!-- 轮播 -->
+		<view class="swiper" wx:if="{{imgUrls.length>0}}">
+			<swiper class="swiper_item" autoplay circular   bindchange="change" indicator-color="rgba(248,122,47,1);" indicator-active-color="#F87A2F">
+				<!-- <block wx:for="{{imgUrls}}" wx:for-index="imgindex" wx:key="imgindex" style="text-align: center;"> -->
+					<swiper-item bindtap="jumpadDetail"  data-id="{{item.id}}" wx:for="{{imgUrls}}" wx:for-index="imgindex" wx:key="imgindex" style="text-align: center;">
+						<image src="{{item.bannerImg}}?x-oss-process=image/resize,m_fill,w_690,h_180/quality,Q_100" class="swiper-image" height="180" />
+					</swiper-item>
+				<!-- </block> -->
+			</swiper>
+			<view class="flex_center" style="justify-content: center">
+				<view wx:for="{{imgUrls}}" wx:for-index="textindex" wx:key="textindex" class="{{index==textindex?'icon_swiper':'icon_swiper_false'}}"></view>
+			</view>
+		</view>
+		<view class="moreHelp">
+			<image class="swiper-icon" src="/img/help/swiper-icon.png"></image>
+			<view class="swiper-help">
+				<swiper wx:if="{{moreHelpList.length>0}}" style="height:40rpx;flex:1" autoplay="true" interval="{{interval}}" duration="{{duration}}" vertical circular>
+					<block wx:for="{{moreHelpList}}" wx:for-index="_index" wx:key="_index" >
+						<swiper-item class="swiper_content_item">
+							<view class="swiper_name ellipsis" bindtap="jumpHelpDetail" data-id="{{item.id}}" data-userInfoId="{{item.userInfoId}}">{{item.demandTitle}}</view>
+						</swiper-item>
+					</block>
+				</swiper>
+				<view wx:else class="noHelp">暂无求助</view>
+			</view>
+			<view class="more_help" wx:if="{{moreHelpList.length>0}}" bindtap="jumpMore">更多求助</view>
+		</view>
+	</view>
+	<view class="content">
+		<view class="classify">
+			<view class='title'>
+				<scroll-view scroll-x="true" style=" white-space: nowrap; display: inline-block">
+					<view class='titleSel' wx:for="{{tabList}}" wx:for-index="idx" bindtap='titleClick' wx:key="idx" data-idx='{{idx}}'>
+						<view class="sel">
+							<text class="{{idx == currentIndex ? 'tabItemtrue':'tabItemfalse'}}">{{item.typeName}}</text>
+							<hr class="{{idx == currentIndex ? 'headerLineSel' : 'headerLineUnsel'}}" />
+						</view>
+					</view>
+				</scroll-view>
+			</view>
+			<view class="search" bindtap="jumpSerch">
+				<image class="index_search" src="/img/help/index_search.png"></image>
+			</view>
+		</view>
+		<view wx:if="{{list.length>0}}">
+			<view class="list" wx:for="{{list}}" wx:key="index" bindtap="jumpDetail" data-userInfoId="{{item.userInfoId}}" data-id="{{item.id}}" data-index="{{index}}">
+				<view class="flex listItem">
+					<image src="{{item.userHeadImg+'?x-oss-process=image/resize,m_fill,w_108,h_108/quality,Q_100'||'/img/user/code_headimg.png'}}" class="listItemImg"></image>
+					<view class="flex-1  itemRight">
+						<view class="itemName">{{item.userName}}</view>
+						<view class="flex" style="margin-top:20rpx">
+							<view class="flex-1 flex" style="flex-wrap:wrap">
+								<view class="icon_text" wx:for="{{item.abilityTag}}" wx:for-item="val" wx:for-index="_index" wx:key="_index">{{val}}</view>
+								<!-- <view class="icon_text" style="margin-left:20rpx">推理</view> -->
+							</view>
+							<view catchtap="addLike" data-item="{{item}}" data-thumbUp="{{item.thumbUp}}" data-index="{{index}}">
+								<view class="flex_center" wx:if="{{item.thumbUp}}">
+									<image class="icon_give" src="/img/index/icon_give_true.png"></image>
+									<text style="font-size:28rpx;color:#F87A2F;margin-left:12rpx">{{item.likeNum}}</text>
+								</view>
+								<view class="flex_center" wx:else>
+									<image class="icon_give" src="/img/index/icon_give_false.png"></image>
+									<text style="font-size:28rpx;color:#333;margin-left:12rpx">{{item.likeNum}}</text>
+								</view>
+							</view>
+						</view>
+					</view>
+				</view>
+			</view>
+		</view>
+		<view wx:if="{{list.length===0 && !loadMore}}">
+			<view class="flex_empty">
+				<image class="msg_empty" src="/img/index/msg_empty.png"></image>
+				<view class="emptyText">数据为空~</view>
+			</view>
+		</view>
+	</view>
+	<image class="icon_fixed" wx:if="{{!show}}" bindtap="jumpShow" src="/img/help/icon_fixed.png"></image>
+	<view class="alert" wx:if="{{show}}">
+		<view>
+			<view bindtap="jumpAcity">
+				<image class="alert_icon1" src="/img/help/alert_icon1.png"></image>
+				<text class="alert_text1">发布能力</text>
+			</view>
+			<view bindtap="jumpCurrent">
+				<image class="alert_icon2" src="/img/help/alert_icon2.png"></image>
+				<text class="alert_text2">发布求助</text>
+			</view>
+			<image class="alert_del" bindtap="cancleShow" src="/img/help/alert_del.png"></image>
+		</view>
+	</view>
+</view>

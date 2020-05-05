@@ -1,0 +1,13 @@
+<view class="main">
+	<view wx:if="{{list.length>0}}">
+		<view class="listItem" wx:for="{{list}}" wx:key="index" bindtap="jumpDetail" data-item="{{item}}">
+			<view class="title">活动标题：{{item.voteName}}</view>
+			<view class="change">投票选项：{{item.optionName}} </view>
+			<view class="time">投票时间：{{item.gmtCreate}}</view>
+		</view>
+	</view>
+	<view class="noRelease" wx:if="{{list.length==0 && !loadMore}}">
+		<image class="noReleaseImg" src="/img/user/noRelease.png"></image>
+		<text class="noReleaseText">我的发布为空~</text>
+	</view>
+</view>

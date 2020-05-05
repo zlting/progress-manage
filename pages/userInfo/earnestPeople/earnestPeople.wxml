@@ -1,0 +1,37 @@
+
+<swiper autoplay circular wx:if="{{bannerList.length>0}}" class="peopleIcon"  indicator-dots current="{{indexType}}" bindchange="change" indicator-color="rgba(248,122,47,1);" indicator-active-color="#F87A2F">
+		<swiper-item bindtap="jumpadDetail" data-id="{{item.id}}" wx:for="{{bannerList}}" wx:for-index="imgindex" wx:key="imgindex">
+			<image src="{{item.bannerImg}}" class="peopleIcon" />
+		</swiper-item>
+</swiper>
+<view class="main">
+  <view class="flex_center title">
+		<view>姓名</view>
+    <input class="flex-1" value="{{userName}}" bindinput="getName" style="text-align:right" placeholder-style="font-size:30rpx;color:#ccc" placeholder="请输入姓名"></input>
+	</view>
+	<picker class="picker" bindchange="bindChange" value="{{index}}" range="{{identityList}}" range-key="communityName">
+		<view class="flex_center title">
+			<view>所在小区</view>
+			<view class="flex-1 flex_center" style="justify-content:flex-end">
+				<view style="font-size:30rpx;color:#666;font-weight:normal">{{identityList[index].communityName}}</view>
+				<image class="upload_icon_right" src="/img/index/upload_icon_right.png"></image>
+			</view>
+		</view>
+	</picker>
+	<view class="msgTitle">申请理由</view>
+	<view class="msgInput">
+		<textarea value="{{applyMsg}}" bindinput="getMsg" placeholder="请输入申请理由" placeholder-style="color:#ccc;font-size:30rpx"></textarea>
+		<view class="inputText">不超过300字</view>
+	</view>
+	<view class="flex_center titleText">
+		<view bindtap="changeCircle">
+			<image class="icon_circle_false" wx:if="{{circleType}}" src="/img/help/icon_circle_true.png"></image>
+			<image class="icon_circle_false" wx:else src="/img/help/icon_circle_false.png"></image>
+		</view>
+    <text style="margin-left:10rpx">我已阅读</text>
+    <text style="color:#64A3EA" bindtap="jumpRule">《规则说明》</text>
+	</view>
+	<view style="padding:60rpx 0 40rpx" bindtap="apply">
+		<btn text="申请" />
+	</view>
+</view>

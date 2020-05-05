@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "能力主页",
+  "enablePullDownRefresh": false,
+  "usingComponents": {
+    "btn":"/components/btn/btn"
+  }
+}

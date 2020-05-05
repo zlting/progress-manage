@@ -1,0 +1,16 @@
+<view class="main">
+	<back text="红包详情" bgColor="{{colorType?'#F99457':'rgba(249, 148, 87, 0)'}};" />
+	<view class="area_main">
+		<image class="area_icon" src="/img/index/area_icon.png"></image>
+		<view class="head">
+			<view class="flex_center">
+				<image class="headImg" src="{{obj.headImgUrl}}?x-oss-process=image/resize,m_fill,w_120,h_120/quality,Q_100"></image>
+				<view class="area_name">{{obj.advertisersName}}</view>
+			</view>
+		</view>
+	</view>
+	<view class="area_content">
+		<view>{{obj.adContent}}</view>
+		<image class="imgUrl" wx:for="{{obj.adImg}}" wx:key="index" src="{{item}}" mode="widthFix" bindtap="previewImage" data-src="{{item}}"></image>
+	</view>
+</view>

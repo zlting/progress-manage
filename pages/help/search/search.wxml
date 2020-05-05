@@ -1,0 +1,41 @@
+	<view>
+		<view class="flex_center" style="padding:30rpx">
+			<view class="flex_center flex-1 search">
+				<icon class="searchcion" size='20' type='search'></icon>
+				<input placeholder="请输入能力标签" value="{{pages.userName}}" bindinput="getName" style="padding:0 20rpx" class="flex-1" placeholder-style="font-size:32rpx;color:#ccc"></input>
+					<image wx:if="{{show}}" catchtap="cancle" class="input-delect" src="/img/help/input-delect.png"></image>
+			</view>
+			<text class="searchText" bindtap="search">搜索</text>
+		</view>
+		<view wx:if="{{list.length>0}}">
+
+			<view class="list" wx:for="{{list}}" wx:key="index" bindtap="jumpDetail" data-userInfoId="{{item.userInfoId}}">
+				<view class="flex listItem">
+					<image src="{{item.userHeadImg}}" class="listItemImg"></image>
+					<view class="flex-1  itemRight">
+						<view class="itemName">{{item.userName}}</view>
+						<view class="flex" style="margin-top:20rpx">
+							<view class="flex-1 flex" style="flex-wrap:wrap">
+								<view class="icon_text" wx:for="{{item.abilityTag}}" wx:for-item="val" wx:for-index="_index" wx:key="_index">{{val}}</view>
+								<!-- <view class="icon_text" style="margin-left:20rpx">推理</view> -->
+							</view>
+							<view catchtap="addLike" data-item="{{item}}" data-thumbUp="{{item.thumbUp}}" data-index="{{index}}">
+								<view class="flex_center" wx:if="{{item.thumbUp}}">
+									<image class="icon_give" src="/img/index/icon_give_true.png"></image>
+									<text style="font-size:28rpx;color:#F87A2F;margin-left:12rpx">{{item.likeNum}}</text>
+								</view>
+								<view class="flex_center" wx:else>
+									<image class="icon_give" src="/img/index/icon_give_false.png"></image>
+									<text style="font-size:28rpx;color:#333;margin-left:12rpx">{{item.likeNum}}</text>
+								</view>
+							</view>
+						</view>
+					</view>
+				</view>
+			</view>
+		</view>
+		<view class="noData" wx:if="{{list.length==0 && !loadMore}}">
+			<image class="noHelp" src="/img/help/search_empty.png"></image>
+			<text class="noText">搜索结果为空~</text>
+		</view>
+	</view>

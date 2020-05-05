@@ -1,0 +1,112 @@
+{
+  "pages": [
+    "pages/home/index/index",
+    "pages/home/forbidden/forbidden",
+    "pages/home/htmlDetail/htmlDetail",
+    "pages/home/poster/poster",
+    "pages/home/voteRule/voteRule",
+    "pages/home/html/html",
+    "pages/userInfo/index/index",
+    "pages/home/login/login",
+    "pages/home/questionnaire/questionnaire",
+    "pages/home/activityDetail/activityDetail",
+    "pages/home/messageDetail/messageDetail",
+    "pages/home/disclaimer/disclaimer",
+    "pages/home/drawSucess/drawSucess",
+    "pages/home/postMessage/postMessage",
+    "pages/home/evaluate/evaluate",
+    "pages/home/userinfo/userinfo",
+    "pages/home/shareArea/shareArea",
+    "pages/home/attestationArea/attestationArea",
+    "pages/home/submitSucess/submitSucess",
+    "pages/home/openArea/openArea",
+    "pages/home/approveArea/approveArea",
+    "pages/home/changeHouse/changeHouse",
+    "pages/userInfo/code/code",
+    "pages/userInfo/recommendSoft/recommendSoft",
+    "pages/userInfo/recommend/recommend",
+    "pages/userInfo/advertiser/advertiser",
+    "pages/userInfo/earnestPeople/earnestPeople",
+    "pages/userInfo/packetDetail/packetDetail",
+    "pages/userInfo/leftPacketRecord/leftPacketRecord",
+    "pages/userInfo/myPacket/myPacket",
+    "pages/userInfo/turnDetail/turnDetail",
+    "pages/userInfo/oldTrun/oldTrun",
+    "pages/userInfo/applyTrun/applyTrun",
+    "pages/userInfo/myTurn/myTurn",
+    "pages/userInfo/advertising/advertising",
+    "pages/userInfo/myAbility/myAbility",
+    "pages/userInfo/qusetionDetail/qusetionDetail",
+    "pages/userInfo/myQuestionnaire/myQuestionnaire",
+    "pages/userInfo/myVote/myVote",
+    "pages/userInfo/applyDetail/applyDetail",
+    "pages/userInfo/myRegistration/myRegistration",
+    "pages/userInfo/myInterest/myInterest",
+    "pages/userInfo/myRelease/myRelease",
+    "pages/userInfo/changeUser/changeUser",
+    "pages/help/ruleDetail/ruleDetail",
+    "pages/help/issueCapacity/issueCapacity",
+    "pages/help/pleaseMessage/pleaseMessage",
+    "pages/help/complain/complain",
+    "pages/help/capacity/capacity",
+    "pages/help/search/search",
+    "pages/help/searchTitle/searchTitle",
+    "pages/help/levelMsg/levelMsg",
+    "pages/help/helpDetail/helpDetail",
+    "pages/help/moreSos/moreSos",
+    "pages/help/index/index",
+    "pages/message/message"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTextStyle": "black",
+    "enablePullDownRefresh": false,
+    "backgroundColor": "#F3F4F5"
+  },
+  "tabBar": {
+    "color": "#333",
+    "backgroundColor": "#fff",
+    "selectedColor": "#F87A2F",
+    "borderStyle": "white",
+    "list": [
+      {
+        "text": "首页",
+        "pagePath": "pages/home/index/index",
+        "iconPath": "img/home.png",
+        "selectedIconPath": "/img/home-icon.png"
+      },
+      {
+        "text": "互助",
+        "pagePath": "pages/help/index/index",
+        "iconPath": "img/help.png",
+        "selectedIconPath": "img/help-icon.png"
+      },
+      {
+        "text": "消息",
+        "pagePath": "pages/message/message",
+        "iconPath": "img/msg.png",
+        "selectedIconPath": "img/msg-icon.png"
+      },
+      {
+        "text": "我的",
+        "pagePath": "pages/userInfo/index/index",
+        "iconPath": "img/user.png",
+        "selectedIconPath": "img/user-icon.png"
+      }
+    ],
+    "position": "bottom"
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序位置接口的效果展示"
+    },
+    "permission": {
+      "scope.writePhotosAlbum": {
+        "desc": "读取相册"
+      }
+    }
+  },
+  "debug": false,
+  "sitemapLocation": "sitemap.json"
+}

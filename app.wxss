@@ -1,0 +1,36 @@
+page{
+  background-color: #fff;
+  /* height: 100%; */
+}
+.flex_center{
+  display: flex;
+  align-items: center;
+}
+.column_between{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.flex{
+  display: flex;
+}
+.flex-1{
+  flex:1
+}
+.line_ellipsis {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+.line_ellipsis_three {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+}
+.ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

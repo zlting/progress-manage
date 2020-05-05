@@ -1,0 +1,19 @@
+<view class="main">
+	<view class="msgInput">
+		<textarea placeholder="请输入投诉内容" value="{{complaintContent}}" bindinput="getValue" placeholder-style="color:#ccc;font-size:30rpx"></textarea>
+		<view class="inputText">不超过300字</view>
+	</view>
+	<view class="upload">
+    <view class="uplodImg" wx:for="{{complaintImg}}" wx:key="index">
+      <image class="imgItem" src="{{item}}"></image>
+      <image class="upload_delect" bindtap="delect" data-index="{{index}}" src="/img/index/upload_delect.png"></image>
+    </view>
+		<view class="msg_upload_div" bindtap="uploadImg">
+			<image class="msg_upload" src="/img/index/msg_upload.png"></image>
+			<text class="msg_upload_num">{{complaintImg.length}}/5</text>
+		</view>
+	</view>
+  <view class="bottom" bindtap="apply">
+    <btn text="提交"/>
+  </view>
+</view>

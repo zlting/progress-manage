@@ -1,0 +1,42 @@
+  .question_icon{
+    width: 100%;
+    height: 220rpx;
+    z-index: -1;
+    position: relative;
+  }
+.content{
+  padding:30rpx;
+  border-radius: 24rpx;
+  margin-top: -30rpx;
+  background: #fff;
+}
+.checkIcon{
+  width: 32rpx;
+  height: 32rpx;
+  margin-right: 30rpx;
+}
+.answer1{
+  font-size: 28rpx;
+  color: #333;
+}
+.answer{
+  font-size: 28rpx;
+  color: #F5A600;
+}
+.icon_status {
+  width: 100%;
+  height: 10rpx;
+  margin: 30rpx 0;
+}
+.botton{
+  position: fixed;
+  width: 100%;
+  margin:auto;
+  bottom: 0rpx;
+  padding-bottom: 30rpx;
+  background: #fff;
+  z-index: 2;
+}
+.main{
+  padding-bottom: 130rpx;
+}

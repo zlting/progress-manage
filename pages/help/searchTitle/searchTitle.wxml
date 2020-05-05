@@ -1,0 +1,10 @@
+	<view>
+		<view class="flex_center" style="padding:30rpx">
+			<view class="flex_center flex-1 search">
+				<icon class="searchcion" size='20' type='search'></icon>
+				<input placeholder="请输入能力标签" value="{{userName}}" bindinput="getName" style="padding:0 20rpx" class="flex-1" placeholder-style="font-size:32rpx;color:#ccc"></input>
+				<image wx:if="{{show}}" catchtap="cancle" class="input-delect" src="/img/help/input-delect.png"></image>
+			</view>
+			<text class="searchText" bindtap="jumpSerch">搜索</text>
+		</view>
+	</view>

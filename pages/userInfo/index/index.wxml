@@ -1,0 +1,98 @@
+<view>
+	<view class="main">
+		<view class="top">
+			<image class="capacity_icon" src="/img/help/capacity_icon.png"></image>
+			<view class="top_main">
+				<view class="flex_center" wx:if="{{userInfo.userNames}}" style="padding: 40rpx 30rpx;" bindtap="jumpUser">
+					<image class="headImg"src="{{userInfo.headimgurl+'?x-oss-process=image/resize,m_fill,w_120,h_120/quality,Q_100'||'/img/user/code_headimg.png'}}"></image>
+					<image class="compile_icon" src="/img/user/compile_icon.png"></image>
+					<view wx:if="{{userInfo.register}}">
+						<view class="name">{{userInfo.userNames}}</view>
+						<view class="number">近邻号：{{userInfo.residentCode}}</view>
+					</view>
+				</view>
+				<view class="flex_center" wx:else >
+					<image class="userIcon"  src="/img/userIcon.png"></image>
+					<!-- <button wx:else class="registerBtn" open-type="getUserInfo" bindgetuserinfo="getUserInfo" type="default" hover-class="none">立即注册</button> -->
+					<view catchtap="register" class="registerBtn">立即认证</view>
+				</view>
+			</view>
+		</view>
+		<view class="content">
+			<view class="divOne">
+				<view style="padding-left:30rpx">
+					<text class="viewTitle">社区功能</text>
+					<text class="icon"></text>
+				</view>
+				<view class="oneList">
+					<view class="oneListItem" wx:for="{{communityList}}" wx:key="index" bindtap="jumpDetail" data-name="{{item.name}}" data-url="{{item.url}}">
+						<image class="communityImg" src="/img/user/community{{index+1}}.png"></image>
+						<text class="communityText">{{item.name}}</text>
+					</view>
+				</view>
+			</view>
+			<view class="divOne">
+				<view style="padding-left:30rpx">
+					<text class="viewTitle">互助</text>
+					<text class="icon" style="width:68rpx"></text>
+				</view>
+				<view class="oneList">
+					<view class="oneListItem" wx:for="{{mutualList}}" wx:key="index" bindtap="jumpDetail" data-name="{{item.name}}" data-url="{{item.url}}">
+						<image class="communityImg" src="/img/user/mutual{{index+1}}.png"></image>
+						<text class="communityText">{{item.name}}</text>
+					</view>
+				</view>
+			</view>
+			<view class="divOne">
+				<view style="padding-left:30rpx">
+					<text class="viewTitle">红包</text>
+					<text class="icon" style="width:68rpx"></text>
+				</view>
+				<view class="oneList">
+					<view class="oneListItem" bindtap="jumpPacket">
+						<image class="communityImg" src="/img/user/hongbao.png"></image>
+						<text class="communityText">红包</text>
+					</view>
+				</view>
+			</view>
+			<view class="divOne">
+				<view style="padding-left:30rpx">
+					<text class="viewTitle">权限申请</text>
+					<text class="icon" ></text>
+				</view>
+				<view class="oneList">
+					<view class="oneListItem" wx:for="{{jurisdictionList}}" wx:key="index" bindtap="jumpDetail" data-name="{{item.name}}" data-url="{{item.url}}">
+						<image class="communityImg" src="/img/user/jurisdiction{{index+1}}.png"></image>
+						<text class="communityText">{{item.name}}</text>
+					</view>
+				</view>
+			</view>
+			<view class="divOne">
+				<view style="padding-left:30rpx">
+					<text class="viewTitle">推荐</text>
+					<text class="icon" style="width:68rpx"></text>
+				</view>
+				<view class="oneList">
+					<view class="oneListItem" wx:for="{{recommendList}}" wx:key="index" bindtap="jumpDetail" data-name="{{item.name}}" data-url="{{item.url}}">
+						<image class="communityImg" src="/img/user/recommend{{index+1}}.png"></image>
+						<text class="communityText">{{item.name}}</text>
+					</view>
+				</view>
+			</view>
+			<view class="divOne">
+				<view style="padding-left:30rpx">
+					<text class="viewTitle">客服</text>
+					<text class="icon" style="width:68rpx"></text>
+				</view>
+				<view>
+					<button class="contat " size="mini" type="default" plain="true" hover-class="none" open-type="contact">
+						<view class="oneListItem">
+							<image class="communityImg" src="/img/user/service.png"></image>
+							<text class="communityText">近邻客服</text>
+						</view>
+					</button>
+				</view>
+			</view>
+		</view>
+	</view>
+</view>

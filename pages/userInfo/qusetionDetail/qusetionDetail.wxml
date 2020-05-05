@@ -1,0 +1,36 @@
+<view>
+	<view class="main">
+		<view class="content">
+			<view wx:for="{{obj.nbPaperQuestionList}}" wx:key="index">
+				<view class="flex">
+					<view style="font-size:32rpx;color:#F87A2F">*</view>
+					<view class="flex flex-1">
+						<view class="name flex-1">{{index+1}}，{{item.questionName}}</view>
+						<view style="font-size:26rpx;color:#999">（{{item.questionType?'多选':"单选"}}）</view>
+					</view>
+				</view>
+				<view>
+					<view class="flex_center" style="padding-top:30rpx" wx:for="{{item.questionInfoList}}" wx:for-item="val" wx:for-index="_index" wx:key="_index">
+						<image class="checkIcon" wx:if="{{val.select}}" src="/img/index/check_true.png"></image>
+						<image class="checkIcon" wx:else src="/img/index/check_false.png"></image>
+						<view class="{{val.select?'answer':'answer1'}}" >{{val.serialNum}}、{{val.content}}</view>
+					</view>
+				</view>
+				<image class="icon_status" wx:if="{{index+1!=obj.nbPaperQuestionList.length}}" src="/img/index/icon_status.png"></image>
+			</view>
+			<!-- <view class="flex">
+				<view style="font-size:32rpx;color:#F87A2F">*</view>
+				<view class="flex_center">
+					<view class="name">02，您投入多少资金在股市</view>
+					<view style="font-size:26rpx;color:#999">（多选）</view>
+				</view>
+			</view>
+			<view>
+				<view class="flex_center" style="padding-top:30rpx" wx:for="{{6}}">
+					<image class="checkIcon" src="/img/index/check_false.png"></image>
+					<view class="answer1">B、选项1选项1选项1</view>
+				</view>
+			</view> -->
+		</view>
+	</view>
+</view>

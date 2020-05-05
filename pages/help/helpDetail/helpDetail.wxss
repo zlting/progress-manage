@@ -1,0 +1,84 @@
+.top {
+  height: 328rpx;
+  font-size: 28rpx;
+  z-index: -1;
+  position: relative;
+  color: #fff;
+}
+
+.helpDetail {
+  height: 328rpx;
+  width: 100%;
+  position: relative;
+}
+
+.timetitle {
+  font-size: 32rpx;
+  text-align: center;
+  position: absolute;
+  top: 36rpx;
+  width: 100%;
+  font-family: PingFangSC-Medium, PingFang SC;
+}
+
+.timeBtn {
+  width: 76rpx;
+  height: 76rpx;
+  background: rgba(251, 145, 76, 0.5);
+  border-radius: 16rpx;
+  text-align: center;
+  line-height: 76rpx;
+  font-size: 44rpx;
+  font-weight: bold;
+  border: 2rpx solid rgba(255, 255, 255, 1);
+}
+
+.time {
+  position: absolute;
+  top: 110rpx;
+  width: 100%;
+}
+
+.timeDiv {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.timeText {
+  padding-left: 10rpx;
+  padding-right: 22rpx;
+}
+
+.content {
+  border-radius: 24px 24px 0px 0px;
+  background: #fff;
+  padding: 40rpx 30rpx;
+  font-size: 30rpx;
+  color: #333;
+  margin-top: -90rpx
+}
+.title{
+  font-size: 40rpx;
+  color: #333;
+  font-weight: bold;
+}
+.baochou{
+  padding:20rpx 0 0rpx 0;
+  font-size: 30rpx;
+  color: #F87A2F;
+  font-weight: bold;
+}
+
+.button {
+  position: fixed;
+  bottom: 40rpx;
+  margin: auto;
+  width: 100%;
+}
+.imgUrl{
+  width: 100%;
+  /* height: 320rpx; */
+  margin-top: 30rpx;
+  border-radius:20rpx;
+}

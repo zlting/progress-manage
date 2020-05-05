@@ -1,0 +1,11 @@
+<view class="main">
+	<image class="sucess_icon" src="/img/index/sucess_icon.png"></image>
+  <!-- 认证成功 -->
+	<text style="color:#333;font-size:34rpx;font-weight:bold">{{type==1?'提交成功':'认证成功'}}</text>
+	<text wx:if="{{type==1}}" class="text" >请耐心等待近邻审核~</text>
+	<text wx:else class="text" >恭喜您成功认证{{name}}~</text>
+  <!-- 恭喜您成功认证XXX小区~ -->
+	<view class="bottomBtn" bindtap="goBack">
+		<btn class="btn" text="返回首页" />
+	</view>	
+</view>

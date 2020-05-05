@@ -1,0 +1,314 @@
+.top {
+  background: rgba(255, 255, 255, 1);
+  border-radius: 0px 0px 24rpx 24rpx;
+  padding: 30rpx
+}
+
+page {
+  height: 100%;
+  background: #F3F4F5;
+}
+
+.top_title_text {
+  font-size: 44rpx;
+  color: #333;
+  font-weight: bold;
+}
+
+.top_title_right {
+  font-size: 28rpx;
+  color: #333;
+  margin-left: 20rpx;
+}
+
+.top_title {
+  align-items: baseline;
+}
+
+.swiper {
+  /* padding: 40rpx 30rpx 0rpx 30rpx; */
+  padding-top: 40rpx;
+}
+
+.swiper_item {
+  width: 100%;
+  border-radius: 20rpx;
+  height: 180rpx;
+}
+
+.swiper-image {
+  border-radius: 20rpx;
+  width:690rpx;
+  height: 100%;
+}
+
+.icon_swiper {
+  width: 12rpx;
+  height: 12rpx;
+  background: rgba(248, 122, 47, 1);
+  border-radius: 50%;
+  margin-right: 16rpx;
+  margin-top: 24rpx;
+}
+
+.icon_swiper_false {
+  width: 12rpx;
+  height: 12rpx;
+  background: rgba(248, 122, 47, .3);
+  border-radius: 50%;
+  margin-right: 16rpx;
+  margin-top: 24rpx;
+}
+
+.moreHelp {
+  margin-top: 22rpx;
+  position: relative;
+  height: 90rpx;
+}
+
+.swiper-icon {
+  width: 100%;
+  height: 90rpx;
+}
+
+.swiper-help {
+  position: absolute;
+  top: 26rpx;
+  left: 100rpx;
+  width: 438rpx;
+}
+
+.more_help {
+  font-size: 28rpx;
+  color: #509EE2;
+  position: absolute;
+  right: 30rpx;
+  top: 26rpx;
+}
+
+.swiper_name {
+  width: 438rpx;
+  font-size: 28rpx;
+  color: #666;
+}
+
+.classify {
+  display: flex;
+}
+
+.content {
+  border-radius: 24rpx;
+  margin-top: 20rpx;
+}
+
+.title {
+  width: 100%;
+  height: 110rpx;
+  overflow: auto;
+  /* padding: 36rpx 0 30rpx 0; */
+  display: flex;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  left: 0;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  border-radius: 24rpx 0rpx 0 0;
+  border-bottom: 2rpx solid #F6F6F6;
+}
+
+.titleSel {
+
+  display: inline-block;
+  /* width: 100rpx; */
+  margin: 0 34rpx;
+  /* height: 20rpx;  */
+
+}
+
+.sel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.titleUnsel {
+  color: #858fab;
+  font-size: #858fab;
+}
+
+.headerLineSel {
+  width: 80rpx;
+  height: 10rpx;
+  background: linear-gradient(315deg, rgba(248, 122, 47, 1) 0%, rgba(249, 148, 87, 1) 100%);
+  box-shadow: 0rpx 4rpx 8rpx 0rpx rgba(248, 122, 47, 0.3);
+  border-radius: 2rpx;
+  position: relative;
+  margin-top:-8rpx;
+}
+
+.headerLineUnsel {
+  background: #fff;
+  width: 80rpx;
+  height: 10rpx;
+  position: relative;
+}
+
+.tabItemtrue {
+  font-size: 36rpx;
+  color: #333;
+  font-weight: bold;
+}
+
+.tabItemfalse {
+  font-size: 28rpx;
+  color: #333;
+}
+
+.index_search {
+  width: 48rpx;
+  height: 48rpx;
+}
+
+.search {
+  border-radius: 0rpx 24rpx 0 0;
+  display: flex;
+  width: 122rpx;
+  height: 110rpx;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+}
+.noHelp{
+  height: 40rpx;
+  line-height: 40rpx;
+  font-size: 28rpx;
+  color: #333;
+  margin-left: 30rpx;
+}
+.classify {
+  border-bottom: 2rpx solid #F6F6F6;
+}
+
+.scroll_w {
+  width: 100%;
+  height: 50rpx;
+  white-space: nowrap;
+}
+
+.listItemImg {
+  width: 108rpx;
+  height: 108rpx;
+  border-radius: 50%;
+  margin-right: 20rpx;
+}
+
+.listItem {
+  background: #fff;
+  padding: 40rpx 0 30rpx 30rpx;
+}
+
+.icon_text {
+  padding: 4rpx 18rpx;
+  text-align: center;
+  line-height: 42rpx;
+  background: rgba(254, 246, 229, 1);
+  border-radius: 8rpx;
+  font-size: 24rpx;
+  color: #F5A600;
+  margin-right:20rpx;
+  margin-bottom: 6rpx;
+}
+
+.itemName {
+  font-size: 32rpx;
+  color: #333;
+  font-weight: bold;
+}
+
+.icon_give {
+  width: 40rpx;
+  height: 40rpx;
+}
+
+.itemRight {
+  padding-right: 30rpx;
+  border-bottom: 2rpx solid #F6F6F6;
+  padding-bottom: 34rpx;
+}
+
+.icon_fixed {
+  position: fixed;
+  /* box-shadow:0px 8rpx 16rpx 0px rgba(248,123,49,0.2); */
+  width: 148rpx;
+  height: 148rpx;
+  right: 14rpx;
+  bottom: 110rpx
+}
+
+.alert_text1 {
+  position: fixed;
+  bottom: 400rpx;
+  right: 22rpx;
+}
+
+.alert_text2 {
+  position: fixed;
+  bottom: 236rpx;
+  right: 22rpx;
+}
+
+.alert_icon1 {
+  width: 88rpx;
+  height: 88rpx;
+  position: fixed;
+  bottom: 434rpx;
+  right: 30rpx;
+}
+
+.alert_icon2 {
+  width: 88rpx;
+  height: 88rpx;
+  position: fixed;
+  bottom: 272rpx;
+  right: 30rpx;
+}
+
+.alert_del {
+  width: 30rpx;
+  height: 30rpx;
+  position: fixed;
+  bottom: 156rpx;
+  right: 58rpx;
+}
+
+.alert {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, .5);
+  top: 0;
+  left: 0;
+  font-size: 26rpx;
+  color: #fff;
+}
+.flex_empty{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+}
+.msg_empty{
+  width: 498rpx;
+  height: 326rpx;
+  margin-bottom: 72rpx;
+  margin-top: 50rpx;
+}
+.emptyText{
+  font-size: 30rpx;
+  padding-bottom: 20rpx;
+  color: #ccc;
+}

@@ -1,0 +1,13 @@
+<view class="text">
+	<rich-text nodes="{{content}}"></rich-text>
+	<!-- <view class="bottom">
+    <btn text="转发" />
+  </view> -->
+	<view wx:if="{{type}}" class="bottom" bindtap="jumpHome">
+		<btn text="注册" />
+	</view>
+	<button wx:else open-type="share" size="mini" type="default" class="bottom" hover-class="none">
+		<btn text="转发" />
+	</button>
+
+</view>

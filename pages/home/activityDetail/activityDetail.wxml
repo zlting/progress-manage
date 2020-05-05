@@ -1,0 +1,46 @@
+<view class="main">
+	<!-- topFalse -->
+	<view class="top {{obj.activityState==='OVER'?'topFalse':'topTrue'}}">
+		<!-- 活动进行中/ -->
+		<view class="activityStatus">{{obj.activityState==='NOT_STARTS'?"活动未开始":obj.activityState==='OVER'?"活动已结束":"活动进行中"}}</view>
+		<view class="activityTime">活动时间：{{obj.startTime}} ～ {{obj.endTime}}</view>
+	</view>
+	<view class="content">
+		<view class="activityTitle">{{obj.activityName}}</view>
+		<view class="flex">
+			<view class="label">报名时间：</view>
+			<view class="value flex-1">{{obj.signStartTime}} ～ {{obj.signEndTime}}</view>
+		</view>
+		<view class="flex" style="padding:20rpx 0 30rpx 0">
+			<view class="label">活动地点：</view>
+			<view class="value flex-1">{{obj.detail}}</view>
+		</view>
+		<image class="icon_status" src="/img/index/icon_status.png"></image>
+		<view class="flex">
+			<view class="label">创建时间：</view>
+			<view class="value flex-1">{{obj.gmtCreate}}</view>
+		</view>
+		<view class="flex" style="padding:20rpx 0">
+			<view class="label">发布时间：</view>
+			<view class="value flex-1">{{obj.gmtCreate}}</view>
+		</view>
+		<view class="flex">
+			<view class="label">活动状态：</view>
+			<view class="value flex-1">{{obj.activityState==='NOT_STARTS'?"未开始":obj.activityState==='OVER'?"已结束":"进行中"}}</view>
+		</view>
+	</view>
+	<view class="contentText">
+		<text>{{obj.activityContent}}</text>
+		<image src="{{item}}"  mode="widthFix" class="imgUrl" wx:for="{{obj.activityBanner}}" wx:key="index" data-src="{{item}}" bindtap="previewImage"></image>
+	</view>
+
+	<view class="button" wx:if="{{obj.activityState !== 'OVER'}}">
+		<!-- <view wx:if="obj.activityState==='NOT_STARTS'"> -->
+		<view wx:if="{{obj.signUpState=='ENROLMENT'}}" class="buttonStatus">您已报名</view>
+		<view wx:if="{{obj.signUpState=='OVER'}}" class="buttonStatus">报名已截止</view>
+		<btn bindtap="postSignUp" wx:if="{{obj.signUpState=='NO_ENROLMENT'}}" text="立即报名" />
+		<!-- </view> -->
+		<!-- 报名未开始/报名已截止/您已报名 -->
+		<view class="buttonStatus" wx:if="{{obj.signUpState=='NOT_STARTS'}}">报名未开始</view>
+	</view>
+</view>

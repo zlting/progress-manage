@@ -1,0 +1,90 @@
+<view class="userInfo">
+	<view class="top_main">
+		<view class="top_content">
+			<view class="flex-center ">
+				<view class="headImgDiv">
+					<image class="headImg" src="{{userInfo.headImgUrl}}"></image>
+				</view>
+			</view>
+			<view class="top_name flex-center">{{userInfo.userName}}</view>
+			<view class="top_bottom" wx:if="{{show}}">
+				<view class="top_bottom_div">
+					<view class="top_bottom_flex1" bindtap="jumpComplain">
+						<image class="user_icon" src="/img/index/user_icon1.png"></image>
+						<text >投诉</text>
+					</view>
+					<view class="top_bottom_flex1 border_icon" bindtap="jumpShield" wx:if="{{!userInfo.shield}}">
+						<image class="user_icon" src="/img/index/user_icon2.png"></image>
+						<text>屏蔽</text>
+					</view>
+					<view class="top_bottom_flex1 border_icon" bindtap="jumpShield" wx:else>
+						<image class="user_icon" src="/img/index/user_icon22.png"></image>
+						<text style="color:#FAD589">已屏蔽</text>
+					</view>
+					<view class="top_bottom_flex1" wx:if="{{!userInfo.attention}}" bindtap="jumpAttention">
+						<image class="user_icon" src="/img/index/user_icon3.png"></image>
+						<text style="color:#F87A2F">关注</text>
+					</view>
+					<view class="top_bottom_flex1" wx:else bindtap="jumpAttention">
+						<image class="user_icon" src="/img/index/user_icon4.png"></image>
+						<text style="color:#FBD0AD">已关注</text>
+					</view>
+				</view>
+			</view>
+		</view>
+	</view>
+	<!-- 内容区域 -->
+	<view class="content">
+		<view wx:if="{{list.length>0}}">
+			<view wx:for="{{list}}" wx:key="index">
+				<view class="listItem" wx:if="{{item.isTop}}">
+					<view class="itemName">
+						<text class="itemIcon"></text>
+						<view class="flex flex-1">
+							<image style="width:120rpx;height:120rpx" src="{{item.img[0]||'https://jinlin-property.oss-cn-shanghai.aliyuncs.com/img/hhcfpAwNecBKxm3bj5TwhCTEt5rT4EjNzz2Y'}}"></image>
+							<text class="line_ellipsis" style="flex:1;margin-left:20rpx;height: 88rpx;">{{item.content}}</text>
+						</view>
+					</view>
+					<view class="flex_center" style="padding:0 30rpx">
+						<view class="flex-1 time">{{item.time}}</view>
+						<view class="flex_center"  bindtap="lookDetail" data-id="{{item.id}}" style="font-size:28rpx;color:#509EE2">
+							查看详情
+						</view>
+					</view>
+				</view>
+				<view class="listItem" wx:else>
+					<view class="itemName">
+						<text class="itemIcon"></text>
+						<text class="flex-1" >{{item.content||''}}</text>
+					</view>
+					<view class="imgList">
+						<image class="imgItem" wx:for="{{item.img}}" bindtap="previewImage" wx:for-item="val" wx:for-index="_index" wx:key="_index" data-item="{{item.img}}" data-src="{{val}}"  src="{{val}}?x-oss-process=image/resize,m_fill,w_190,h_190/quality,Q_100"></image>
+					</view>
+					<view class="flex_center" style="padding:0 30rpx">
+						<view class="flex-1 time">{{item.time}}</view>
+						<view class="flex_center bottomNum">
+							<view class="flex_center">
+								<view class="flex_center" catchtap="addLike" data-isThumbUp="{{item.isThumbUp}}" data-index="{{index}}">
+									<image class="imgIcon" wx:if="{{item.isThumbUp}}" src="/img/index/icon_give_true.png"></image>
+									<image class="imgIcon" wx:else src="/img/index/icon_give_false.png"></image>
+									<text style="color:{{item.isThumbUp?'#F87A2F':''}}">{{item.likeNum}}</text>
+								</view>
+							</view>
+						</view>
+						<view class="flex_center" wx:if="{{item.isEvaluate}}" style="margin-left:50rpx" bindtap="jumpEvalute" data-id="{{item.id}}">
+							<image class="imgIcon" src="/img/index/icon_message.png"></image>
+							<text>{{item.evaluateNum}}</text>
+						</view>
+
+					</view>
+				</view>
+			</view>
+		</view>
+		<view wx:if="{{list.length===0 && !loadMore}}">
+			<view class="flex_empty">
+				<image class="msg_empty" src="/img/index/msg_empty.png"></image>
+				<view class="emptyText">消息为空~</view>
+			</view>
+		</view>
+	</view>
+</view>

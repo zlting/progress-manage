@@ -1,0 +1,48 @@
+<view class="main">
+	<view class="flex-1 mainTop">
+		<view class="flex-1">
+			<swiper autoplay circular wx:if="{{bannerList.length>0}}" class="houseIcon" current="{{indexType}}" indicator-dots bindchange="change" indicator-color="rgba(248,122,47,1);" indicator-active-color="#F87A2F">
+				<swiper-item wx:for="{{bannerList}}" wx:for-index="imgindex" wx:key="imgindex" bindtap="jumpadDetail" data-id="{{item.id}}" style="text-align: center;">
+					<image src="{{item.bannerImg}}" class="houseIcon" />
+				</swiper-item>
+			</swiper>
+			<view class="week">
+				<text class="title">您已入驻的小区</text>
+			</view>
+		</view>
+		<view class="content1">
+			<view wx:if="{{list.length>0}}" class="auto">
+				<view class="week" wx:for="{{list}}" wx:key="index" bindtap="changeCity" data-item="{{item}}">
+					<view class="flex_center">
+						<text class="flex-1 name">{{item.communityName}}</text>
+						<view wx:if="{{!item.share}}">
+							<view class="icon_btn1" wx:if="{{item.owner}}">业主</view>
+							<view class="icon_btn2" wx:else>住户</view>
+						</view>
+					</view>
+					<view class="title" style="margin-top:10rpx">{{item.address}}</view>
+				</view>
+			</view>
+			<view class="content2" wx:else>
+				<image class="houseEmpty" src="/img/index/houseEmpty.png"></image>
+				<view class="noApprove">您尚未认证小区</view>
+				<view class="approveDetail">
+					<view>请点击顶部的阅读须知，阅读后</view>
+					<view>认证小区，开启不一样的近邻之旅吧~</view>
+				</view>
+				<!-- <view class="content2Btn" bindtap="jumpApprove">
+			<btn text="认证小区" />
+		</view> -->
+			</view>
+		</view>
+	</view>
+	<view class="bottomBtn">
+		<view class="addText" wx:if="{{list.length>0}}">友情提示：每位用户可认证一个共享区和一个居住社区</view>
+		<view bindtap="jumpApprove" wx:if="{{jumpType}}">
+			<btn text="认证小区" />
+		</view>
+		<button wx:else class="goodsPriceAuth" open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber">立即认证</button>
+
+		<!-- <btn text="认证小区" /> -->
+	</view>
+</view>

@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "推荐软文",
+  "enablePullDownRefresh": false ,
+  "usingComponents": {
+    "btn": "/components/btn/btn"  
+  }
+}

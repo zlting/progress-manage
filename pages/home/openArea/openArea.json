@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "希望开通小区",
+  "usingComponents": {
+    "btn": "/components/btn/btn"  
+  }
+}

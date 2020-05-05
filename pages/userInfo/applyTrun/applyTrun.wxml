@@ -1,0 +1,56 @@
+<view class="main">
+	<picker class="picker" bindchange="bindChange" value="{{index}}" range="{{identityList}}" range-key="communityName">
+		<view class="flex_center title">
+			<view>所在小区</view>
+			<view class="flex-1 flex_center" style="justify-content:flex-end">
+				<view style="font-size:30rpx;color:#666;font-weight:normal">{{identityList[index].communityName}}</view>
+				<image class="upload_icon_right" src="/img/index/upload_icon_right.png"></image>
+			</view>
+		</view>
+	</picker>
+	<view class="flex_center title">
+		<view>求助标题</view>
+		<input class="flex-1" value="{{demandTitle}}" bindinput="getTitle" style="text-align:right" placeholder-style="font-size:30rpx;color:#ccc" placeholder="请输入求助标题"></input>
+	</view>
+	<view class="msgTitle">求助详情</view>
+	<view class="msgInput">
+		<textarea value="{{demandDetail}}" bindinput="getDetail" placeholder="请输入求助详情" placeholder-style="color:#ccc;font-size:30rpx"></textarea>
+		<view class="inputText">不超过300字</view>
+	</view>
+	<view class="msgTitle" style="padding:40rpx 0 30rpx">图片（选填）</view>
+	<view class="upload">
+		<view class="uplodImg" wx:for="{{imgList}}" wx:key="index">
+			<image class="imgItem" src="{{item}}"></image>
+			<image class="upload_delect" bindtap="delect" data-index="{{index}}" src="/img/index/upload_delect.png"></image>
+		</view>
+		<view class="msg_upload_div" bindtap="uploadImg">
+			<image class="msg_upload" src="/img/index/msg_upload.png"></image>
+			<text class="msg_upload_num">{{imgList.length}}/3</text>
+		</view>
+	</view>
+	<picker class="picker" bindchange="bindTime" value="{{index}}" range="{{timeList}}">
+		<view class="flex_center title">
+			<view>求助时限</view>
+			<view class="flex-1 flex_center" style="justify-content:flex-end">
+				<view style="font-size:30rpx;color:#666;font-weight:normal">{{timeLimit}}天</view>
+				<image class="upload_icon_right" src="/img/index/upload_icon_right.png"></image>
+			</view>
+		</view>
+	</picker>
+
+	<view class="flex_center title">
+		<view>求助报酬</view>
+		<input class="flex-1" type='number' value="{{demandAmount}}" bindinput="getMoney" style="text-align:right" placeholder-style="font-size:30rpx;color:#ccc" placeholder="请输入求助报酬（选填）"></input>
+	</view>
+	<view class="flex_center titleText">
+		<view bindtap="changeCircle">
+			<image class="icon_circle_false" wx:if="{{circleType}}" src="/img/help/icon_circle_true.png"></image>
+			<image class="icon_circle_false" wx:else src="/img/help/icon_circle_false.png"></image>
+		</view>
+		<text style="margin-left:10rpx">我已阅读</text>
+		<text style="color:#64A3EA" bindtap="jumpRule">《规则说明》</text>
+	</view>
+	<view style="padding:60rpx 0 40rpx" bindtap="jumpApply">
+		<btn text="发布" />
+	</view>
+</view>

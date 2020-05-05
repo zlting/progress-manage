@@ -1,0 +1,45 @@
+<view>
+	<view class="packetTop">
+		<image class="packetIcon1" src="/img/user/packetIcon1.png"></image>
+		<image class="packetIcon" src="/img/user/packetIcon.png"></image>
+		<view class="packetIcon flex_center" style="height:148rpx;margin-top:56rpx">
+			<view class="flex-1 topLeft" bindtap="jumpLeft">
+				<view class="top_title">共享区红包 ></view>
+				<view class="flex week">
+					<text style="font-family:Antonio-Bold,Antonio">{{data.shareMoneyTotal}}</text>
+					<text style="font-size:40rpx">元</text>
+				</view>
+			</view>
+			<view class="flex-1" style="text-align:center" bindtap="jumpRight">
+				<view class="top_title">小区红包 ></view>
+				<view class="flex week">
+					<text style="font-family:Antonio-Bold,Antonio;">{{data.communityMoneyTotal}}</text>
+					<text style="font-size:40rpx">元</text>
+				</view>
+			</view>
+		</view>
+	</view>
+	<view class="list" wx:if="{{list.length>0}}" >
+		<view class="listItem" wx:for="{{list}}" wx:key="index" bindtap="jumpDetail" data-id="{{item.id}}">
+			<view class="flex">
+				<text class="flex-1 itemTitle ">{{item.advertisersName}}</text>
+        <!-- 待开奖 -->
+				<text class="addMoney" wx:if="{{item.deliver}}">+{{item.money}}元</text>
+				<text class="addMoney" wx:else>待开奖</text>
+			</view>
+			<view class="flex" style="padding:20rpx 0 10rpx" wx:if="{{item.deliver}}">
+				<text class="flex-1 ellipsis">{{item.communityName}}</text>
+				<view style="text-align:right">领取时间：{{item.gmtCreate}}</view>
+			</view>
+			<view class="flex" style="padding:20rpx 0 10rpx" wx:else>
+				<text class="flex-1 ellipsis">{{item.communityName}}</text>
+				<text class="time" style="color:#F87A2F" >开奖时间：{{item.deliverDate}}</text>
+			</view>
+		
+		</view>
+	</view>
+  <view class="noPacket" wx:if="{{list.length==0 && !loadMore}}">
+    <image src="/img/user/noPacket.png"></image>
+    <text>红包为空~</text>
+  </view>
+</view>

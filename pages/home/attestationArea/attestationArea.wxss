@@ -1,0 +1,138 @@
+.area_icon {
+  width: 100%;
+  height:388rpx;
+}
+.area_name{
+  position: absolute;
+  font-size: 44rpx;
+  color: #fff;
+  font-weight: bold;
+  left:30rpx;
+  top: 168rpx;
+}
+.area_main{
+  width: 100%;
+  height:388rpx;
+  position: relative;
+  z-index: -1;
+}
+.area_content{
+  padding:0 30rpx;
+  margin-top:-120rpx;
+  background: #fff;
+  z-index: 22;
+  border-radius:24rpx 24rpx 0 0;
+}
+.statusName{
+  font-size: 30rpx;
+  color: #666;
+}
+.icon_circle{
+  width: 20rpx;
+  height: 20rpx;
+  margin-right: 10rpx;
+}
+.week{
+  padding:40rpx 0;
+  border-bottom: 1rpx solid #F6F6F6;
+}
+.weekTitle{
+  font-size: 30rpx;
+  color: #333;
+  font-weight: bold;
+}
+.area_right{
+  width: 20rpx;
+  height: 28rpx;
+  margin-left: 16rpx;
+}
+.icon_upload{
+  width: 160rpx;
+  height: 160rpx;
+}
+
+.bottomBtn{
+  width: 100%;
+  margin:auto;
+  padding-top:80rpx;
+  bottom: 40rpx;
+}
+.text{
+  font-size: 28rpx;
+  color: #666;
+}
+.call{
+  font-size: 28rpx;
+  color: #64A3EA;
+  text-decoration: underline;
+}
+.bottomText{
+  position: fixed;
+  width: 100%;
+  bottom: 40rpx;
+  text-align: center;
+  left: 0;
+  display: flex;
+  justify-content: center;
+}
+.menu-btn{
+  border:none !important;
+  text-align: center;
+  padding: 0 !important;
+  line-height: normal !important;
+}
+input{
+  color: #666;
+}
+.alert{
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background:rgba(0,0,0,.5);
+  top: 0;
+  left: 0;
+  z-index: 99;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.alertContent{
+  width:550rpx;
+  height:318rpx;
+  background:rgba(255,255,255,1);
+  border-radius:24rpx;
+}
+.alertBtn{
+  height: 100rpx;
+  border-top: 1rpx solid #F6F6F6;
+  display: flex;
+}
+.alertText{
+  font-size: 32rpx;
+  color: #333;
+  padding:60rpx 30rpx 62rpx;
+  text-align: center;
+}
+.cancle{
+  font-size: 34rpx;
+  color: #666666;
+  text-align: center;
+  line-height: 100rpx;
+  /* font-weight: bold; */
+  border-right: 1rpx solid #F6F6F6;
+}
+.sucess{
+  font-size: 34rpx;
+  color: #F87A2F;
+  font-weight: bold;
+  text-align: center;
+  line-height: 100rpx;
+}
+.addinput{
+  text-align: right;
+  flex:1;
+  color: #666;
+  font-size: 30rpx;
+
+}

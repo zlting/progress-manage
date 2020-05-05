@@ -1,0 +1,95 @@
+.posterBg {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    display: block;
+    top: 0;
+    left: 0;
+}
+
+.content {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    /* height: 100%; */
+    height: 818rpx;
+    bottom:0;
+    z-index: 2;
+}
+
+.btmDiv{
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    bottom: 188rpx;
+}
+.headImg {
+    width: 156rpx;
+    height: 156rpx;
+    margin: auto;
+    display: block;
+    border: 6rpx solid rgba(253, 240, 230, 1);
+    border-radius: 50%;
+    box-shadow: 0rpx 12rpx 24rpx 0rpx rgba(0, 0, 0, 0.06);
+    box-sizing: border-box;
+}
+
+.tip {
+    color: #A75938;
+    font-size: 40rpx;
+    margin-top: 40rpx;
+}
+
+.text {
+    display: flex;
+    width: 618rpx;
+    margin: 0 auto;
+    margin-top: 20rpx;
+    color: #A75938;
+    font-size: 28rpx;
+}
+
+.two {
+    flex: 1;
+    text-align: left;
+}
+
+.qcode {
+    width: 270rpx;
+    height: 270rpx;
+    margin-top: 82rpx;
+}
+
+.btn {
+    width: 400rpx;
+    height: 88rpx;
+    line-height: 88rpx;
+    font-size: 32rpx;
+    font-weight: 500;
+    text-align: center;
+    color: #FF5037;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(255, 190, 127, 1) 100%);
+    border-radius: 46rpx;
+    position: relative;
+    z-index: 3;
+    bottom: 30rpx;
+    left: 174rpx;
+    position: fixed;
+}
+
+page {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.myCanvas{
+    /* z-index: -1; */
+    position: fixed;
+    top: -1000px;
+}
+.poster_bottom{
+    width: 100%;
+    height: 818rpx;
+}

@@ -1,0 +1,24 @@
+<view class="poster">
+	<image src="https://jinlin-property.oss-cn-shanghai.aliyuncs.com/img/cGYra6A6w2JGN5QDtrBcG6nERCGRzjpEw4Ec" class="posterBg"></image>
+	<view class="content">
+		<image src="https://jinlin-property.oss-cn-shanghai.aliyuncs.com/img/WxsGww47tGb4M6RKJbh3wahfHTsFyCsfGtA4" class="poster_bottom"></image>
+		<back text="海报详情" bgColor="rgba(249, 148, 87, 0);" />
+		<view class="btmDiv">
+			<image class="headImg" src="{{obj.headImgUrl+'?x-oss-process=image/resize,m_fill,w_156,h_156/quality,Q_100'||'/img/user/code_headimg.png'}}" />
+			<view class="tip">快领取{{obj.userNames}}的近邻红包</view>
+			<view class="text">
+				<text class="one">领取范围：</text>
+				<view class="two flex">
+				<view wx:if="{{obj.share}}">
+						<text wx:if="{{obj.kilometers}}">{{obj.centerAddress}}周围{{obj.kilometers}}公里内</text>
+						<text wx:else>{{obj.dist}}</text>
+				</view>
+				<text wx:else>{{obj.scopeName}}</text>
+				</view>
+			</view>
+			<image class="qcode" src="/img/qcode.jpg" />
+		</view>
+	</view>
+	<canvas class="myCanvas" style="width:375px;height:667px" canvasId="myCanvas"></canvas>
+	<view class="btn" bindtap="tosave">保存海报</view>
+</view>

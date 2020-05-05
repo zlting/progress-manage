@@ -1,0 +1,44 @@
+.listItem{
+  padding:30rpx 0;
+  border-bottom: 2rpx solid #F6F6F6;
+}
+.delectMsg{
+  padding:30rpx 30rpx 20rpx 30rpx;
+  font-size: 30rpx;
+  color: #64A3EA;
+  text-align: right;
+  border-bottom: 2rpx solid #F6F6F6;
+}
+.right_icon{
+  width: 20rpx;
+  height: 28rpx;
+}
+.msgName{
+  font-size: 30rpx;
+  color: #333;
+  font-weight: bold;
+}
+.time{
+  padding-top: 20rpx;
+  font-size: 28rpx;
+  color: #666;
+}
+.main{
+  padding:0 30rpx
+}
+.msg_empty{
+  width: 498rpx;
+  height: 326rpx;
+  margin-bottom: 72rpx;
+  margin-top: 278rpx;
+}
+.emptyText{
+  font-size: 30rpx;
+  color: #ccc;
+}
+.flex_empty{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

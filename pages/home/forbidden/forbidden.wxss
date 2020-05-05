@@ -1,0 +1,34 @@
+.menu-btn {
+  border: none !important;
+  text-align: center;
+  padding: 0 !important;
+  line-height: normal !important;
+}
+
+.text {
+  font-size: 28rpx;
+  color: #666;
+}
+
+.call {
+  font-size: 28rpx;
+  color: #64A3EA;
+}
+.bold{
+  font-size: 34rpx;
+  color: #333;
+  font-weight: bold;
+  padding: 20rpx 0;
+}
+image {
+  width: 484rpx;
+  height: 320rpx;
+}
+.main{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}

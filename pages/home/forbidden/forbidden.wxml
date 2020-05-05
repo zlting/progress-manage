@@ -1,0 +1,8 @@
+<view class="main">
+	<image class="noUser" src="/img/noUser.png"></image>
+  <view class="bold">您的账号已被禁用</view>
+	<button class="menu-btn" size="mini" type="default" plain="true" hover-class="none" open-type="contact">
+		<text class="text">如有疑问，请</text>
+		<text class="call">联系客服</text>
+	</button>
+</view>

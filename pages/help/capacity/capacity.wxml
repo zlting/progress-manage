@@ -1,0 +1,70 @@
+<view>
+	<view class="main">
+		<view class="top">
+			<image class="capacity_icon" src="/img/help/helpBg.png"></image>
+			<view class="top_main">
+				<view class="flex_center " style="padding: 40rpx 30rpx;">
+					<image class="headImg" src="{{data.userHeadImg||'/img/user/code_headimg.png'}}"></image>
+					<view class="flex-1">{{data.userName}}</view>
+					<view bindtap="addLike">
+						<view class="top_right flex_center" wx:if="{{data.thumbUp}}">
+							<image src="/img/index/icon_give_true.png"></image>
+							<text style=" color: #F87A2F;">{{data.likeNum}}</text>
+						</view>
+						<view class="top_right flex_center" wx:else>
+							<image src="/img/index/icon_give_false.png"></image>
+							<text style=" color:#333;">{{data.likeNum}}</text>
+						</view>
+					</view>
+				</view>
+			</view>
+		</view>
+		<view class="flex">
+			<view class='title'>
+				<scroll-view scroll-x="true" style=" white-space: nowrap; display: inline-block">
+					<view class='titleSel' wx:for="{{classify}}" wx:for-index="idx" wx:key="idx" bindtap='titleClick' data-idx='{{idx}}'>
+						<view class="sel">
+							<text class="{{idx == currentIndex ? 'tabItemtrue':'tabItemfalse'}}">{{item}}</text>
+							<hr class="{{idx == currentIndex ? 'headerLineSel' : 'headerLineUnsel'}}" />
+						</view>
+					</view>
+				</scroll-view>
+			</view>
+		</view>
+		<view class="flex_content">
+			<view class="noComplain" wx:if="{{data.abilityDetailList.length==0}}">
+				<image src="/img/help/noComplain.png"></image>
+				<text>能力为空~</text>
+			</view>
+			<view wx:else>
+				<view class="content_title">{{data.abilityDetailList[currentIndex].abilityDetail}}</view>
+				<view class="content_detail">{{data.abilityDetailList[currentIndex].abilityDesc}}</view>
+				<image class="imgUrl" mode="widthFix" wx:for="{{data.abilityDetailList[currentIndex].abilityImg}}" bindtap="previewImage" wx:key="index" data-src="{{item}}" src="{{item}}"></image>
+				<!-- <image class="imgUrl" wx:for="{{data.abilityDetailList[currentIndex].abilityImg}}" wx:key="index" src="{{item}}"></image> -->
+			</view>
+		</view>
+	</view>
+	<view class="bottom" wx:if="{{type}}">
+		<view class="flex">
+			<view class="flex-1 flex">
+				<view class="iconDiv" bindtap="jumpComplainant">
+					<image class="complain" src="/img/help/complain.png"></image>
+					<text>投诉</text>
+				</view>
+				<view bindtap="addLike" class="addLike">
+					<view class="iconDiv" style="margin-left:30rpx" wx:if="{{data.thumbUp}}">
+						<image class="complain" src="/img/help/zan_true.png"></image>
+						<text style=" color: #F87A2F;">已点赞</text>
+					</view>
+					<view class="iconDiv" style="margin-left:30rpx" wx:else>
+						<image class="complain" style="margin-left:12rpx" src="/img/help/zan_false.png"></image>
+						<text style=" color: #333;">点赞</text>
+					</view>
+				</view>
+			</view>
+			<view style="padding-right:30rpx" bindtap="jumpHelp">
+				<btn text="请TA帮忙" />
+			</view>
+		</view>
+	</view>
+</view>

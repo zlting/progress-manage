@@ -1,0 +1,32 @@
+<view>
+<back text="注册" bgColor="rgba(249, 148, 87, 0);" />
+	<image class="icon_top" src="/img/login/icon_top.png"></image>
+	<view style="padding:0 80rpx">
+		<view class="registerDiv">
+			<view class="registerName">注册</view>
+			<view class="icon_bottom"></view>
+		</view>
+		<view>
+			<view class="inputDiv">
+				<view class="titleName">姓名</view>
+				<input placeholder="请输入姓名(4个字符)" maxlength="4" bindinput="getUserName" value="{{userName}}" placeholder-style="font-size:34rpx;color:#ccc"></input>
+			</view>
+			<view class="inputDiv">
+				<view class="titleName">手机号</view>
+				<input placeholder="请输入手机号" bindinput="getPhone" maxlength="11" value="{{phone}}" type="number" maxlength="11" placeholder-style="font-size:34rpx;color:#ccc"></input>
+			</view>
+			<view class="inputDiv">
+				<view class="titleName">验证码</view>
+				<view class="flex_center">
+					<input class="flex-1" maxlength="6" placeholder="请输入验证码" bindinput="getCode"  value="{{code}}" placeholder-style="font-size:34rpx;color:#ccc"></input>
+					<view class="code" bindtap="jumpCode">{{getmsg}}</view>
+				</view>
+			</view>
+			<view class="bottomBtn" bindtap="register">
+				<btn class="btn" text="注册" />
+			</view>
+		</view>
+
+	</view>
+
+</view>

@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "填写问卷",
+  "usingComponents": {
+    "btn":"/components/btn/btn"
+  }
+}

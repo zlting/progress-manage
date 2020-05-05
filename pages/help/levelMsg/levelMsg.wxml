@@ -1,0 +1,18 @@
+<view class="lsit">
+	<view class="listItem" >
+		<view class="ellipsis title">{{obj.demandTitle}}</view>
+		<view class="flex">
+			<view class="flex-1">{{day}}天{{hou}}时{{min}}分{{sec}}秒</view> 
+			<view class="money" wx:if="{{obj.demandAmount}}">报酬：{{obj.demandAmount}}元</view>
+		</view>
+	</view>
+	<view class="evaluteBottom" style="bottom:{{bottom}}px" >
+		<view style="height:98rpx;padding:0 30rpx" class="flex_center">
+			<image class="evalute_icon" src="/img/index/evalute_icon.png"></image>
+			<view class="flex flex-1">
+				<input class="flex-1" value="{{info}}" bindinput="getInfo" adjust-position="{{false}}"  bindfocus="foucus" bindblur="blur" placeholder="请输入内容" placeholder-style="font-size:30rpx;color:#ccc"></input>
+				<text class="issue" bindtap="jumpSend">发送</text>
+			</view>
+		</view>
+	</view>
+</view>

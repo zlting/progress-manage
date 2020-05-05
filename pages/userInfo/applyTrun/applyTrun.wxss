@@ -1,0 +1,106 @@
+.main {
+  padding: 0 30rpx
+}
+
+.msgTitle {
+  font-size: 30rpx;
+  color: #333;
+  padding: 40rpx 0 30rpx;
+  font-weight: bold;
+}
+
+.msgInput {
+  background: rgba(246, 246, 246, 1);
+  padding: 30rpx;
+  border-radius: 24rpx;
+}
+
+textarea {
+  height: 200rpx;
+  font-size: 30rpx;
+  color: #333;
+  width: 100%;
+}
+
+.inputText {
+  text-align: right;
+  font-size: 30rpx;
+  color: #666;
+}
+
+.msg_upload {
+  width: 160rpx;
+  height: 160rpx;
+}
+
+.msg_upload_div {
+  width: 160rpx;
+  height: 160rpx;
+  position: relative;
+  margin-bottom: 30rpx;
+}
+
+.msg_upload_num {
+  font-size: 30rpx;
+  color: #ccc;
+  position: absolute;
+  left: 54rpx;
+  bottom: 24rpx;
+}
+
+.upload {
+  display: flex;
+  flex-wrap: wrap;
+  padding-bottom: 10rpx;
+  border-bottom: 2rpx solid #F6F6F6;
+ 
+}
+
+.imgItem {
+  width: 160rpx;
+  height: 160rpx;
+}
+
+.title {
+  padding: 46rpx 0 44rpx;
+  font-size: 30rpx;
+  color: #333;
+  font-weight: bold;
+  border-bottom: 2rpx solid #F6F6F6;
+
+}
+input{
+  font-weight: normal;
+}
+.upload_icon_right {
+  width: 20rpx;
+  height: 28rpx;
+  margin-left: 10rpx;
+}
+
+.uplodImg {
+  width: 160rpx;
+  height: 160rpx;
+  position: relative;
+  margin-bottom: 30rpx;
+  margin-right: 30rpx;
+}
+
+.upload_delect {
+  width: 28rpx;
+  height: 28rpx;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.icon_circle_false{
+  display: block;
+  width: 32rpx;
+  height: 32rpx;
+}
+.titleText{
+  padding: 46rpx 0 44rpx;
+  font-size: 30rpx;
+  color: #333;
+  border-bottom: 2rpx solid #F6F6F6;
+}

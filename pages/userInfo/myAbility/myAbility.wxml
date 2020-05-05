@@ -1,0 +1,60 @@
+<view>
+	<view class="main">
+		<view class="top">
+			<image class="capacity_icon" src="/img/help/capacity_icon.png"></image>
+			<view class="top_main">
+				<view class="flex_center " style="padding: 40rpx 30rpx;">
+					<image class="headImg" src="{{obj.userHeadImg+'?x-oss-process=image/resize,m_fill,w_120,h_120/quality,Q_100'||'/img/user/code_headimg.png'}}"></image>
+					<view class="flex-1">{{obj.userName}}</view>
+					<view class="top_right flex_center" bindtap="addLike" wx:if="{{!obj.thumbUp}}">
+						<image src="/img/index/icon_give_false.png"></image>
+						<text style=" color: #333;">{{obj.likeNum}}</text>
+					</view>
+					<view class="top_right flex_center" bindtap="addLike" wx:else>
+						<image src="/img/index/icon_give_true.png"></image>
+						<text style=" color: #F87A2F;">{{obj.likeNum}}</text>
+					</view>
+				</view>
+			</view>
+		</view>
+		<view class="border"></view>
+		<picker class="picker" bindchange="bindChange" value="{{index}}" range="{{identityList}}" range-key="communityName">
+			<view class="address flex_center">
+				<text class="flex-1">{{identityList[index].communityName}}</text>
+				<image src="/img/user/icon_right.png"></image>
+			</view>
+		</picker>
+		<view class="flex">
+			<view class='title'>
+				<scroll-view scroll-x="true" style=" white-space: nowrap; display: inline-block">
+					<view class='titleSel' wx:for="{{obj.abilityDetailList}}" wx:for-index="idx" wx:key="idx" bindtap='titleClick' data-idx='{{idx}}'>
+						<view class="sel">
+							<text class="{{idx === currentIndex ? 'tabItemtrue':'tabItemfalse'}}">{{item.abilityTag}}</text>
+							<hr class="{{idx === currentIndex ? 'headerLineSel' : 'headerLineUnsel'}}" />
+						</view>
+					</view>
+				</scroll-view>
+			</view>
+		</view>
+		<view class="flex_content">
+			<view class="noComplain" wx:if="{{obj.abilityDetailList.length===0}}">
+				<image src="/img/help/noComplain.png"></image>
+				<text>能力为空~</text>
+			</view>
+			<view wx:else>
+				<view class="content_title">{{obj.abilityDetailList[currentIndex].abilityDesc}}</view>
+				<view class="content_detail">{{obj.abilityDetailList[currentIndex].abilityDetail}}</view>
+				<image class="imgUrl" wx:for="{{obj.abilityDetailList[currentIndex].abilityImg!=''}}" wx:key="index" src="{{item}}"></image>
+			</view>
+		</view>
+	</view>
+	<view class="bottom">
+		<view class="flex ">
+			<view class="butn flex_center" bindtap="jumpNbAbility">
+				<view class="icon">+</view>
+				<text>发布能力</text>
+			</view>
+			<!-- <btn text="发布能力" /> -->
+		</view>
+	</view>
+</view>

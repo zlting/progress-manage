@@ -1,0 +1,56 @@
+.lsit{
+  padding: 0 30rpx;
+  border-radius:0px 0px 20rpx 20rpx;
+  background: #fff;
+}
+.title{
+  font-size: 32rpx;
+  color: #333;
+  font-weight: bold;
+  padding-bottom: 20rpx;
+}
+.listItem{
+  padding: 40rpx 0;
+  border-bottom: 2rpx solid #F6F6F6;
+  font-size: 28rpx;
+  color: #999;
+}
+.money{
+  font-size: 28rpx;
+  color: #F87A2F;
+  font-weight: bold;
+  font-family:PingFangSC-Medium,PingFang SC;
+}
+.noData{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.noHelp{
+  width: 500rpx;
+  height: 326rpx;
+  margin-bottom: 72rpx;
+}
+.noText{
+  font-size: 30rpx;
+  color: #ccc;
+}
+page{
+  background: #F6F6F6;
+  height: 100%;
+}
+.address{
+  padding: 30rpx;
+  font-size: 30rpx;
+  color: #333;
+  font-weight: bold;
+  background: #fff;
+  margin-bottom: 20rpx;
+  border-radius:0px 0px 20rpx 20rpx;
+}
+.address image{
+  width: 20rpx;
+  height: 28rpx;
+}

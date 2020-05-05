@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "成为热心居民",
+  "enablePullDownRefresh": false ,
+  "usingComponents": {
+    "btn": "/components/btn/btn"  
+  }
+}

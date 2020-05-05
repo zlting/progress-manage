@@ -1,0 +1,85 @@
+<view class="main">
+	<view style="padding-bottom:120rpx">
+		<view class="flex_center">
+			<image class="headImg" src="{{obj.headImgUrl||'/img/index/icon_headImg.png'}}"></image>
+			<text class="headName">{{obj.userName}}</text>
+		</view>
+		<view class="flex">
+			<view class="headImg"></view>
+			<text class="headDetail flex-1">{{obj.bulletinContent}}</text>
+		</view>
+		<view class="imgList">
+			<image class="imgItem" wx:for="{{obj.bulletinImg}}" wx:key="index" src="{{item}}" data-src="{{item}}?x-oss-process=image/resize,m_fill,w_180,h_180/quality,Q_100" bindtap="previewImage"></image>
+		</view>
+		<view class="flex-1 flex_center" style="padding-left:100rpx">
+			<view class="flex-1 time">{{obj.gmtCreate}}</view>
+			<view class="flex_center bottomNum">
+				<view class="flex_center">
+					<view class="flex_center" catchtap="addLike" data-isThumbUp="{{obj.isThumbUp}}" data-index="{{index}}">
+						<image class="imgIcon" wx:if="{{obj.isThumbUp}}" src="/img/index/icon_give_true.png"></image>
+						<image class="imgIcon" wx:else src="/img/index/icon_give_false.png"></image>
+						<text style="color:{{obj.isThumbUp?'#F87A2F':''}}">{{obj.likeList.length}}</text>
+					</view>
+				</view>
+				<!-- <view wx:if="{{obj.isThumbUp}}" class="flex_center" style="font-size:28rpx;color:#F87A2F">
+					<image class="imgIcon" src="/img/index/icon_give_true.png"></image>
+					<text style="margin-right:50rpx">{{obj.likeList.length}}</text>
+				</view>
+				<view wx:else>
+					<image class="imgIcon" src="/img/index/icon_give_false.png"></image>
+					<text style="margin-right:50rpx">{{obj.likeList.length}}</text>
+				</view> -->
+				<image class="imgIcon" style="margin-left:50rpx" src="/img/index/icon_message.png"></image>
+				<text>{{obj.evaluateList.length}}</text>
+			</view>
+		</view>
+		<view class="evaluteList">
+			<view wx:if="{{obj.evaluateList.length>0}}">
+				<view style="padding-bottom:40rpx" wx:for="{{obj.evaluateList}}" wx:key="index">
+					<view bindtap="apply" data-item="{{item}}">
+						<view class="flex_center">
+							<image class="headImg" src="{{item.headImgUrl||'/img/index/icon_headImg.png'}}"></image>
+							<view class="flex-1 flex">
+								<text class="headName flex-1" wx:if="{{item.userName=='' || !item.userName}}">暂无</text>
+								<text class="headName flex-1" wx:else>{{item.userName}}</text>
+								<text style="font-size:26rpx;color:#666">{{item.gmtCreate}}</text>
+							</view>
+						</view>
+						<view class="flex">
+							<view class="headImg"></view>
+							<text class="flex-1" style="color:#666;font-size:30rpx">{{item.bulletinMsg}}</text>
+						</view>
+					</view>
+
+					<view wx:if="{{item.childList.length>0}}">
+						<view style="padding-bottom:40rpx" bindtap="apply" data-item="{{value}}" wx:for="{{item.childList}}" wx:for-index="i" wx:key="i" wx:for-item="value">
+							<view class="flex_center">
+								<image class="headImg" src="{{value.headImgUrl||'/img/index/icon_headImg.png'}}"></image>
+								<view class="flex-1 flex">
+									<text class="headName flex-1">{{value.userName}}</text>
+									<text style="font-size:26rpx;color:#666">{{value.gmtCreate}}</text>
+								</view>
+							</view>
+							<view class="flex" style="padding-left:100rpx">
+								<text class="headName1">回复{{value.targetUserName}}：</text>
+								<text class=" flex-1" style="font-size:30rpx;color:#666">{{value.bulletinMsg}}</text>
+							</view>
+							<!-- <view class="replay">回复</view> -->
+						</view>
+					</view>
+				</view>
+
+			</view>
+			<view class="noEvalute" wx:else>当前暂无评论</view>
+		</view>
+	</view>
+	<view class="evaluteBottom" style="bottom:{{bottom}}px" wx:if="{{obj.evaluate}}">
+		<view class="flex_center btmDiv">
+			<image class="evalute_icon" src="/img/index/evalute_icon.png"></image>
+			<view class="flex flex-1">
+				<input value='{{bulletinMsg}}' adjust-position="{{false}}"  focus="{{inputShowed}}"  bindfocus="foucus" bindblur="blur" type='text' maxlength='100' class='commentsInput' placeholder='说点什么吧…' placeholder-style="font-size:30rpx;color:#ccc" bindinput='getValue'></input>
+				<text class="issue" bindtap="jumpIssue">发布</text>
+			</view>
+		</view>
+	</view>
+</view>

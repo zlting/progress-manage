@@ -1,0 +1,77 @@
+.main {
+  padding: 48rpx 30rpx
+}
+.msgInput {
+  background: rgba(246, 246, 246, 1);
+  padding: 30rpx;
+  border-radius: 24rpx;
+}
+
+textarea {
+  height: 200rpx;
+  width:100%;
+  font-size: 30rpx;
+  color: #333;
+}
+
+.inputText {
+  text-align: right;
+  font-size: 30rpx;
+  color: #666;
+}
+
+.msg_upload {
+  width: 160rpx;
+  height: 160rpx;
+}
+
+.msg_upload_div {
+  width: 160rpx;
+  height: 160rpx;
+  position: relative;
+}
+
+.msg_upload_num {
+  font-size: 30rpx;
+  color: #ccc;
+  position: absolute;
+  left: 54rpx;
+  bottom: 24rpx;
+}
+
+.upload {
+  display: flex;
+  flex-wrap: wrap;
+  padding-bottom: 10rpx;
+  margin-top: 30rpx;
+}
+
+.imgItem {
+  width: 160rpx;
+  height: 160rpx;
+}
+
+
+
+.uplodImg {
+  width: 160rpx;
+  height: 160rpx;
+  position: relative;
+  margin-bottom: 30rpx;
+  margin-right: 30rpx;
+}
+
+.upload_delect {
+  width: 28rpx;
+  height: 28rpx;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.bottom{
+  position: fixed;
+  width: 100%;
+  left: 0;
+  bottom: 40rpx;
+  margin:auto
+}

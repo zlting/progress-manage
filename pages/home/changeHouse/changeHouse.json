@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "切换小区",
+  "enablePullDownRefresh": true,
+  "usingComponents": {
+    "btn": "/components/btn/btn"  
+  }
+}

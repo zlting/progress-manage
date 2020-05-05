@@ -1,0 +1,52 @@
+<view>
+	<back text="领取成功" bgColor="background: rgba(249, 148, 87, 0);" />
+	<view class="main">
+		<image class="draw_sucess_icon" src="/img/index/draw_sucess_icon.png"></image>
+		<view class="top_content">
+			<view class="top_main">
+				<view class="flex">
+					<image class="headImg" src="{{obj.headImgUrl+'?x-oss-process=image/resize,m_fill,w_149,h_149/quality,Q_100'||'/img/user/code_headimg.png'}}"></image>
+					<view class="top_content_right">
+						<view class="top_content_name">广告主{{obj.advertisersName}}的红包</view>
+						<view class="flex" style="margin-top:10rpx" wx:if="{{obj.deliver}}">
+							<view class="flex" style="align-items:baseline;" wx:if="{{obj.money>0}}">
+								<view style="font-size:44rpx;color:#E22105">{{obj.money}}</view>
+								<view class="top_content_name">元</view>
+							</view>
+							<view wx:else style="font-size:44rpx;color:#E22105">红包已被抢光</view>
+						</view>
+						<view class="flex_center" style="margin-top:10rpx" wx:else>
+							<view class="top_content_name">开奖时间：</view>
+							<view style="font-size:28rpx;color:#E22105">{{obj.deliverDate}}</view>
+						</view>
+					</view>
+				</view>
+				<view class="draw_top_icon_div">
+					<image class="draw_top_icon" src="/img/index/draw_top_icon.png"></image>
+					<view class="top_text">红包金额将直接发至您的微信账户</view>
+				</view>
+			</view>
+		</view>
+		<image class="draw_icon1" src="/img/index/draw_icon1.png"></image>
+		<image class="draw_icon2" src="/img/index/draw_icon2.png"></image>
+	</view>
+	<view style="padding:0 30rpx">
+		<view class="content_main">
+			<view class="content_name">
+				<text>{{obj.adContent}}</text>
+			</view>
+			<view class="content_img">
+				<image class="content_img_url" src="{{item}}" wx:for="{{obj.adImg}}" bindtap="previewImage" data-src="{{item}}" wx:key="index"></image>
+			</view>
+		</view>
+		<view class="bottom">
+			<view class="flex" style="padding:20rpx 0">
+				<view class="flex_left" bindtap="jumpPoster">生成海报</view>
+				<button open-type="share" size="mini" type="default" class="flex_right" hover-class="none">
+					<text class="text1">转发好友</text>
+				</button>
+			</view>
+			<view class="text" bindtap="jumpRule">广告免责声明</view>
+		</view>
+	</view>
+</view>

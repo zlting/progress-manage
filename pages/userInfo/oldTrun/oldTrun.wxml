@@ -1,0 +1,23 @@
+<view>
+	<picker bindchange="bindPickerChange" value="{{index}}" range="{{identityList}}">
+		<view class="address flex_center">
+			<text class="flex-1">{{name}}</text>
+			<image src="/img/user/icon_right.png"></image>
+		</view>
+	</picker>
+	<view class="lsit">
+		<view wx:if="{{list.length>0}}">
+			<view class="listItem" wx:for="{{list}}" wx:key="index" bindtap="jumpDetail" data-id="{{item.id}}">
+				<view class="ellipsis title">{{item.demandTitle}}</view>
+				<view class="flex">
+					<view class="flex-1">{{item.closeTime}}</view>
+					<view class="money" wx:if="{{item.demandAmount}}">报酬：{{item.demandAmount}}元</view>
+				</view>
+			</view>
+		</view>
+		<view class="noData" wx:if="{{list.length===0 && !loadMore}}">
+			<image class="noHelp" src="/img/help/noHelp.png"></image>
+			<text class="noText">求助为空~</text>
+		</view>
+	</view>
+</view>

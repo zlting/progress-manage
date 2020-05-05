@@ -1,0 +1,148 @@
+.top {
+  width: 100%;
+  height: 200rpx;
+  position: relative;
+  top: 0;
+  left: 0;
+  font-size: 40rpx;
+  color: #333;
+}
+
+.capacity_icon {
+  width: 100%;
+  height: 200rpx;
+  background: #F9F9F9;
+}
+
+.headImg {
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 50%;
+  margin-right: 40rpx;
+}
+
+.top_main {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.top_right {
+  width: 144rpx;
+  height: 64rpx;
+  background: rgba(255, 255, 255, 1);
+  box-shadow: 0rpx -8rpx 32rpx 0rpx rgba(0, 0, 0, 0.03);
+  border-radius: 36rpx;
+  font-size: 32rpx;
+  font-weight: normal;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+
+.top_right image {
+  width: 40rpx;
+  height: 40rpx;
+  margin-right: 10rpx;
+}
+
+.registerBtn {
+  width: 184rpx;
+  height: 68rpx;
+  background: linear-gradient(315deg, rgba(248, 122, 47, 1) 0%, rgba(249, 148, 87, 1) 100%);
+  box-shadow: 0rpx 8rpx 32rpx 0rpx rgba(248, 122, 47, 0.3);
+  border-radius: 46rpx;
+  font-size: 26rpx;
+  color: #fff !important;
+  text-align: center;
+  line-height: 68rpx;
+  border:none !important;
+  position: absolute;
+  left: 180rpx;
+}
+button::after{
+  border:none !important;
+}
+.name {
+  font-size: 40rpx;
+  color: #333;
+  font-weight: bold;
+  margin-top: -10rpx
+}
+
+.number {
+  font-size: 28rpx;
+  color: #999;
+  margin-top: 10rpx
+}
+
+
+
+.compile_icon {
+  width: 56rpx;
+  height: 56rpx;
+  position: absolute;
+  top: 116rpx;
+  left: 102rpx;
+}
+
+.content {
+  padding: 30rpx;
+  background: #F9F9F9;
+}
+
+.divOne {
+  padding: 40rpx 0;
+  background: #fff;
+  border-radius: 24rpx;
+  margin-bottom: 20rpx;
+}
+
+.viewTitle {
+  font-size: 34rpx;
+  color: #333;
+  font-weight: bold;
+}
+
+.icon {
+  width: 136rpx;
+  height: 8rpx;
+  background: linear-gradient(315deg, rgba(248, 122, 47, 1) 0%, rgba(249, 148, 87, 1) 100%);
+  box-shadow: 0rpx 4rpx 8rpx 0rpx rgba(248, 122, 47, 0.3);
+  border-radius: 2rpx;
+  display: block;
+  margin-top: -8rpx;
+  opacity: 0.8;
+}
+
+.communityImg {
+  width: 80rpx;
+  height: 80rpx;
+  display: block;
+}
+.communityText{
+  font-size: 26rpx;
+  color: #333;
+}
+.oneList{
+  display: flex;
+  flex-wrap: wrap;
+}
+.oneListItem{
+  margin-top: 40rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding:0 34rpx;
+}
+.contat{
+  border:none !important;
+  padding: 0 !important;
+}
+
+.userIcon{
+  width: 176rpx;
+  height: 176rpx;
+}

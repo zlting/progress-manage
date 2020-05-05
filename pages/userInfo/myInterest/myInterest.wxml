@@ -1,0 +1,39 @@
+<view class='container'>
+	<!--Tab布局-->
+	<view class='title'>
+		<view class='titleSel' wx:for="{{tabList}}" wx:for-index="idx" bindtap='titleClick' wx:key="idx" data-idx='{{idx}}'>
+			<text class="{{idx == currentIndex ? 'tabItemtrue':'tabItemfalse'}}">{{item}}</text>
+			<hr class="{{idx == currentIndex ? 'headerLineSel' : 'headerLineUnsel'}}" />
+		</view>
+	</view>
+	<!--内容布局-->
+	<swiper class='swiperType' bindchange='pagechange' current='{{currentIndex}}'>
+		<block wx:for="{{tabList}}" wx:for-index="index" wx:key="index" >
+			<!-- style="overflow:{{scrollTop>=430?'auto':''}}"  -->
+			<swiper-item style="overflow:auto">
+				<view class="content" wx:if="{{list.length>0}}">
+					<view wx:for="{{list}}" class='recordItem' wx:key="index" bindtap="jumpDetail" data-userId="{{item.attentionUserId ||item.shieldUserId}}">
+						<view class="flex_center">
+							<image class="headImg" src="{{item.headImgUrl}}?x-oss-process=image/resize,m_fill,w_120,h_120/quality,Q_100"></image>
+							<view class="flex-1 flex_center">
+								<view class="flex-1 itemLeft">
+									<view class="name">{{item.userName}}</view>
+									<view class="flex">
+										<text>关注数 {{item.attentionNum}}</text>
+										<text style="margin-left:40rpx">信息数 {{item.bulletinNum}}</text>
+									</view>
+								</view>
+								<!--  -->
+								<view class="cancle" data-type="{{currentIndex}}" data-item="{{item}}" data-index="{{index}}" catchtap="jumpCancel">{{currentIndex===0?"取消关注":"取消屏蔽"}}</view>
+							</view>
+						</view>
+					</view>
+				</view>
+				<view class="noRelease" wx:if="{{list.length===0 && !loadMore}}">  
+					<image class="noReleaseImg" src="/img/user/noInterest.png"></image>
+					<text class="noReleaseText">我的{{currentIndex===0?"关注":"屏蔽"}}为空~</text>
+				</view>
+			</swiper-item>
+		</block>
+	</swiper>
+</view>
